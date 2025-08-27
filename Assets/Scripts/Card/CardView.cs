@@ -5,10 +5,11 @@ using UnityEngine.EventSystems;
 public class CardView : MonoBehaviour, IPointerClickHandler
 {
 
-    [SerializeField] private SpriteRenderer cardIImage; 
+    [SerializeField] private SpriteRenderer cardIImage;
     [SerializeField] private TMP_Text cardName;
     [SerializeField] private TMP_Text cardDescription;
     [SerializeField] private TMP_Text cardEnergyCost;
+    
 
     private Card card;
 
@@ -29,5 +30,19 @@ public class CardView : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         // card.PerformEffect(); DONT
+    }
+    
+    public void PlayCard(GameObject target)
+    {
+        if (card != null)
+        {
+            Debug.Log($"Playing card: {card.Name} on target: {target.name}");
+            card.PerformEffect(target);
+            Destroy(gameObject); // Remove the card from hand after playing
+        }
+        else
+        {
+            Debug.LogWarning("Card is not set up properly.");
+        }
     }
 }

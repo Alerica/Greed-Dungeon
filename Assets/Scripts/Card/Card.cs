@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Card
@@ -8,7 +9,7 @@ public class Card
         this.cardData = cardData;
         EnergyCost = cardData.energyCost;
         BaseValue = cardData.baseValue;
-        Effect = cardData.Effect;
+        Effect = cardData.effects;
 
     }
 
@@ -19,11 +20,15 @@ public class Card
     public int EnergyCost { get; set; }
     public int BaseValue { get; set; }
 
-    public string Effect { get; set; }
+    public List<CardEffect> Effect { get; set; }
 
-    public void PerformEffect()
+    public void PerformEffect(GameObject target)
     {
-        Debug.Log($"Performing effect: {Effect} with cost of {EnergyCost}" );
+        foreach (var effect in Effect)
+        {
+            Debug.Log($"Performing effect: {effect} with cost of {EnergyCost}" );
+            effect.Apply(target); // Replace null with actual target when implementing
+        }
     }
     
 }

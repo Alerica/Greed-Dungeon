@@ -74,6 +74,7 @@ public class DraggableCard : MonoBehaviour
             targetEnemy = hit.transform;
             snappingToEnemy = true; // start snap animation
             Debug.Log("Card snapped to enemy: " + hit.name);
+            gameObject.GetComponent<CardView>().PlayCard(hit.gameObject);
         }
         else
         {
