@@ -12,19 +12,14 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] private float enemyDamageModifier = 1;
 
-    private List<EnemyStatusEffect> statusEffects = new List<EnemyStatusEffect>();
+    public List<StatusEffect> statusEffects = new List<StatusEffect>();
 
     [Header("SFX")]
     public TextVisualEffect turnBanner;
 
     public void TakeDamage(float amount)
     {
-        health -= amount * (100 / (100 + defense));
-        
-        if (health <= 0)
-        {
-            Die();
-        }
+        StartCoroutine(TakeDamageCoroutine(amount));
     }
 
     public void TakeDamage(float amount, string source = null)
@@ -71,7 +66,7 @@ public class Enemy : MonoBehaviour
             Die();
     }
 
-    public void ApplyStatus(EnemyStatusEffect effect)
+    public void ApplyStatus(StatusEffect effect)
     {
         statusEffects.Add(effect);
         Debug.Log($"{enemyName} received {effect.type} for {effect.turnsRemaining} turns");
@@ -86,8 +81,8 @@ public class Enemy : MonoBehaviour
             turnBanner.ShowBanner(bannerMessage, bannerColor);
         }
     }
-    
-    public IEnumerator ApplyStatusCoroutine(EnemyStatusEffect effect)
+
+    public IEnumerator ApplyStatusCoroutine(StatusEffect effect)
     {
         statusEffects.Add(effect);
         Debug.Log($"{enemyName} received {effect.type} for {effect.turnsRemaining} turns");
@@ -107,7 +102,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    
+
     private Color GetEffectColor(StatusType type)
     {
         switch (type)
@@ -146,7 +141,8 @@ public class Enemy : MonoBehaviour
                 case StatusType.Frost:
                     enemyDamageModifier = Mathf.Max(0, enemyDamageModifier - effect.value);
                     break;
-                // Add other effects here
+
+                    // Add other effects here
             }
 
             effect.turnsRemaining--;
@@ -156,6 +152,11 @@ public class Enemy : MonoBehaviour
     }
 
     public float GetHealth() => health;
+
+    public float GetAttackPower()
+    {
+        return attackPower;
+    }
 
     public void Die()
     {

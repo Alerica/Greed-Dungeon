@@ -20,6 +20,7 @@ public class TextVisualEffect : MonoBehaviour
 
     public IEnumerator ShowBannerCoroutine(string message, Color color)
     {
+        Debug.Log("Starting Text VFX Caroutine");
         bannerText.text = message;
         bannerText.color = color;
 
@@ -39,6 +40,7 @@ public class TextVisualEffect : MonoBehaviour
 
     public IEnumerator ShowBannerCoroutine(string message, Color color, float duration = -1f)
         {
+            Debug.Log("Starting Text VFX Caroutine");
             if (duration < 0f) duration = showDuration; // use default if not set
 
             bannerText.text = message;
@@ -68,4 +70,5 @@ public class TextVisualEffect : MonoBehaviour
     {
         StartCoroutine(ShowBannerCoroutine(message, color));
     }
+    
 }

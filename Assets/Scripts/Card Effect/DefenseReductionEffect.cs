@@ -11,7 +11,7 @@ public class DefenseReductionEffect : CardEffect
         Enemy enemy = target.GetComponent<Enemy>();
         if (enemy != null)
         {
-            enemy.ApplyStatus(new EnemyStatusEffect(StatusType.DefenseReduction, reduceAmount, durationTurns));
+            enemy.ApplyStatus(new StatusEffect(StatusType.DefenseReduction, reduceAmount, durationTurns));
         }
     }
 }

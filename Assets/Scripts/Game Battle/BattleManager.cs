@@ -17,6 +17,10 @@ public class BattleManager : MonoBehaviour
     public int enemiesToSpawn = 1;
     public List<GameObject> enemies = new List<GameObject>();
 
+    [Header("Player")]
+    public GameObject player;
+    public Player playerScript;
+
     [Header("Battle Settings")]
     public int initialCardsInHand = 5;
     public int cardDrawPerTurn = 1;
@@ -44,6 +48,7 @@ public class BattleManager : MonoBehaviour
     void Start()
     {
         ShuffleDeck(deckList);
+        if (playerScript == null) player.GetComponent<Player>();
     }
 
     public void StartBattle()
@@ -97,8 +102,8 @@ public class BattleManager : MonoBehaviour
     {
         for (int i = 0; i < cardDrawPerTurn; i++) cardHolder.DrawCard();
         currentState = BattleState.PlayerTurn;
-        currentEnergy++;
-        currentTurn++;
+        AddEnergy(1);
+        IncreaseTurn();
 
         Debug.Log($"Player's Turn {currentTurn}");
         if (turnBanner) turnBanner.ShowBanner("PLAYER TURN!", Color.cyan);
@@ -137,6 +142,8 @@ public class BattleManager : MonoBehaviour
                 yield return enemyScript.ProcessTurnEffectsCoroutine();
                 Debug.Log($"{enemy.name} finished turn effects!");
             }
+
+            playerScript.TakeDamage(enemyScript.GetAttackPower());
         }
 
         yield return new WaitForSeconds(0.5f); // small buffer
@@ -207,16 +214,24 @@ public class BattleManager : MonoBehaviour
     public void AddEnergy(int energy)
     {
         currentEnergy += energy;
+        battleUIManager.UpdatePlayerEnergy(currentEnergy);
     }
 
     public void RemoveEnergy(int energy)
     {
         currentEnergy -= energy;
+        battleUIManager.UpdatePlayerEnergy(currentEnergy);
     }
 
     public int GetCurrentEnergy()
     {
         return currentEnergy;
+    }
+
+    public void IncreaseTurn()
+    {
+        currentTurn++;
+        battleUIManager.UpdateCurrentTurn(currentTurn);
     }
 }
 

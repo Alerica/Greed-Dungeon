@@ -11,7 +11,7 @@ public class BurnEffect : CardEffect
         Enemy enemy = target.GetComponent<Enemy>();
         if (enemy != null)
         {
-            enemy.ApplyStatus(new EnemyStatusEffect(StatusType.Burn, burnDamage, durationTurns));
+            enemy.ApplyStatus(new StatusEffect(StatusType.Burn, burnDamage, durationTurns));
         }
     }
 }

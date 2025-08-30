@@ -10,7 +10,7 @@ public class StunEffect : CardEffect
         Enemy enemy = target.GetComponent<Enemy>();
         if (enemy != null)
         {
-            enemy.ApplyStatus(new EnemyStatusEffect(StatusType.Stun, 0, durationTurns));
+            enemy.ApplyStatus(new StatusEffect(StatusType.Stun, 0, durationTurns));
         }
     }
 }

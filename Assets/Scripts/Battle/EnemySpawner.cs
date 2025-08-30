@@ -19,10 +19,7 @@ public class EnemySpawner : MonoBehaviour
             enemy.transform.SetParent(spawnPoint, true);   // keep world position
             enemy.transform.localScale = Vector3.one;     // force scale to (1,1,1)
         }
-
-        // Register in BattleManager
-        BattleManager.Instance.RegisterEnemy(enemy);
-
+        
         return enemy;
     }
 }

@@ -11,7 +11,7 @@ public class FrostEffect : CardEffect
         Enemy enemy = target.GetComponent<Enemy>();
         if (enemy != null)
         {
-            enemy.ApplyStatus(new EnemyStatusEffect(StatusType.Frost, reduceAmount, durationTurns));
+            enemy.ApplyStatus(new StatusEffect(StatusType.Frost, reduceAmount, durationTurns));
         }
     }
 }

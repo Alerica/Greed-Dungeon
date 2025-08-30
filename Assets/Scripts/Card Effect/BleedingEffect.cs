@@ -11,7 +11,7 @@ public class BleedEffect : CardEffect
         Enemy enemy = target.GetComponent<Enemy>();
         if (enemy != null) // flesh check
         {
-            enemy.ApplyStatus(new EnemyStatusEffect(StatusType.Bleed, damagePerTurn, durationTurns));
+            enemy.ApplyStatus(new StatusEffect(StatusType.Bleed, damagePerTurn, durationTurns));
         }
     }
 }

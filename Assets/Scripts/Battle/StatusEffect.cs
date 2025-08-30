@@ -1,13 +1,13 @@
 using UnityEngine;
 
 [System.Serializable]
-public class EnemyStatusEffect
+public class StatusEffect
 {
     public StatusType type;
     public int value;        // Damage, defense reduction, etc.
     public int turnsRemaining;
 
-    public EnemyStatusEffect(StatusType type, int value, int turns)
+    public StatusEffect(StatusType type, int value, int turns)
     {
         this.type = type;
         this.value = value;
