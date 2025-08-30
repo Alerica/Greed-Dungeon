@@ -35,7 +35,7 @@ namespace DiceSystem2D
             if (rollButton != null) rollButton.onClick.AddListener(() => RollAll());
         }
 
-        // ---------- PUBLIC PROGRAMMATIC API ----------
+        // ----------------- PUBLIC 
         public int DiceCount => diceList.Count;
 
         public int AddDice(int count)

@@ -103,7 +103,7 @@ MonoBehaviour:
   - {fileID: 2135673066, guid: 21703abc41c6843009506667ab9d0b82, type: 3}
   - {fileID: -1757880503, guid: 21703abc41c6843009506667ab9d0b82, type: 3}
   rollDuration: 0.9
-  jumpHeight: 200
+  jumpHeight: 240
   spinFPS: 18
   fixedSeed: -1
   OnRolledUnityEvent:

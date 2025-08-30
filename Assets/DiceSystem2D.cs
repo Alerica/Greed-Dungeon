@@ -16,7 +16,7 @@ namespace DiceSystem2D
 
         [Header("Timing & Motion")]
         [Min(0.2f)] [SerializeField] private float rollDuration = 0.9f;
-        [SerializeField] private float jumpHeight = 40f;  
+        [SerializeField] private float jumpHeight = 40f;
         [SerializeField] private float spinFPS = 18f;
 
         [Header("Randomness")]
