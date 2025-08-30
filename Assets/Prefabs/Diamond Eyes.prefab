@@ -91,8 +91,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyName: Goblin
-  maxHealth: 1
-  health: 1
+  maxHealth: 14
+  health: 14
   defense: 5
   attackPower: 10
   enemyDamageModifier: 1
