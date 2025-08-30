@@ -39,6 +39,9 @@ public class BattleManager : MonoBehaviour
     public Transform energyTransform;
     public Transform hpTransform;
 
+    [Header("Input Blocker")]
+    [SerializeField] private GameObject inputBlocker;
+
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -89,6 +92,42 @@ public class BattleManager : MonoBehaviour
         IncreaseStage();
         currentTurn = 0;
         Debug.Log($"Advancing to Stage {currentStage}");
+
+        if (currentStage >= 2)
+        {
+            // Pause and wait for player decision
+            ShowRetreatOrContinueUI();
+        }
+        else
+        {
+            // Continue automatically
+            ContinueToStage();
+        }
+    }
+
+    private void ShowRetreatOrContinueUI()
+    {
+        // TODO: Show UI panel with 2 buttons: Retreat / Continue
+        // Hook buttons to Call OnRetreat() and OnContinue()
+        Debug.Log("Choose: Retreat or Continue?");
+    }
+
+    // Called by UI Button
+    public void OnContinue()
+    {
+        Debug.Log("Player chose to continue!");
+        ContinueToStage();
+    }
+
+    // Called by UI Button
+    public void OnRetreat()
+    {
+        Debug.Log("Player chose to retreat!");
+        // TODO: Retreat logic goes here
+    }
+
+    private void ContinueToStage()
+    {
         for (int i = 0; i < enemiesToSpawn; i++)
         {
             GameObject enemyObj = enemySpawner.SpawnEnemy();
@@ -98,12 +137,14 @@ public class BattleManager : MonoBehaviour
                 RegisterEnemy(enemyObj);
             }
         }
+
         StartCoroutine(Wait(2f, () => PlayerTurn()));
     }
 
     // Turn Management
     public void PlayerTurn()
     {
+        inputBlocker.SetActive(false);
         for (int i = 0; i < cardDrawPerTurn; i++) cardHolder.DrawCard();
         currentState = BattleState.PlayerTurn;
         AddEnergy(1);
@@ -116,6 +157,7 @@ public class BattleManager : MonoBehaviour
 
     public void EndPlayerTurn()
     {
+        inputBlocker.SetActive(true); 
         if (currentState != BattleState.PlayerTurn)
         {
             Debug.LogWarning("It's not the player's turn! or the game hasn’t started yet.");
@@ -182,8 +224,6 @@ public class BattleManager : MonoBehaviour
             AddEnergy(3);
         }
     }
-
-
 
     public void DoNothing()
     {
