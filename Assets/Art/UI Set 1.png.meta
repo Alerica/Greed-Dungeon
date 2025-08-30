@@ -259,6 +259,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: UI Set 1_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 600
+        width: 85
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f74b29270122984d9e0cf74b27bb2fb
+      internalID: -144913073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -279,6 +301,7 @@ TextureImporter:
       Banner R: -4451914304257560890
       Book: 2667601576138166109
       Sword: 8577977209111285921
+      UI Set 1_0: -144913073
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
