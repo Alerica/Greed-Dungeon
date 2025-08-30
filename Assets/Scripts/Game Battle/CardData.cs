@@ -11,6 +11,9 @@ public class CardData : ScriptableObject
     public CardType cardType;
     public int baseValue;
     public List<CardEffect> effects; 
+
+    [Header("Visuals")]
+    public GameObject vfxPrefab; // assign the prefab in inspector
 }
 
 public enum CardType

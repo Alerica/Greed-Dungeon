@@ -31,9 +31,13 @@ public class BattleManager : MonoBehaviour
     public int currentTurn = 0;
 
     [Header("References")]
+    public BGAnimator bGAnimator;
     public BattleUIManager battleUIManager;
     public HorizontalCardHolder cardHolder;
     public TextVisualEffect turnBanner;
+
+    public Transform energyTransform;
+    public Transform hpTransform;
 
     void Awake()
     {
@@ -82,7 +86,7 @@ public class BattleManager : MonoBehaviour
     // Stage Management
     public void NextStage()
     {
-        currentStage++;
+        IncreaseStage();
         currentTurn = 0;
         Debug.Log($"Advancing to Stage {currentStage}");
         for (int i = 0; i < enemiesToSpawn; i++)
@@ -94,7 +98,7 @@ public class BattleManager : MonoBehaviour
                 RegisterEnemy(enemyObj);
             }
         }
-        StartCoroutine(Wait(1f, () => PlayerTurn()));
+        StartCoroutine(Wait(2f, () => PlayerTurn()));
     }
 
     // Turn Management
@@ -104,6 +108,7 @@ public class BattleManager : MonoBehaviour
         currentState = BattleState.PlayerTurn;
         AddEnergy(1);
         IncreaseTurn();
+        UpdatePlayerHP();
 
         Debug.Log($"Player's Turn {currentTurn}");
         if (turnBanner) turnBanner.ShowBanner("PLAYER TURN!", Color.cyan);
@@ -113,14 +118,32 @@ public class BattleManager : MonoBehaviour
     {
         if (currentState != BattleState.PlayerTurn)
         {
-            Debug.LogWarning("It's not the player's turn! or the game haven`t started yet.");
+            Debug.LogWarning("It's not the player's turn! or the game hasn’t started yet.");
             return;
         }
 
-        Debug.Log("Player ends turn.");
-        EnemyTurn();
+        StartCoroutine(EndPlayerTurnRoutine());
     }
 
+    private IEnumerator EndPlayerTurnRoutine()
+    {
+        Debug.Log("Ending Player Turn");
+        // small delay before next step
+        yield return new WaitForSeconds(0.5f);
+
+        if (AreAllEnemiesDead())
+        {
+            bGAnimator.StartAnimation();
+            if (turnBanner) turnBanner.ShowBanner("ENEMY DEFEATED!", Color.yellow);
+            yield return new WaitForSeconds(2f);
+            NextStage();
+        }
+        else
+        {
+            Debug.Log("Player ends turn.");
+            EnemyTurn();
+        }
+    }
     public void EnemyTurn()
     {
         currentState = BattleState.EnemyTurn;
@@ -143,12 +166,23 @@ public class BattleManager : MonoBehaviour
                 Debug.Log($"{enemy.name} finished turn effects!");
             }
 
-            playerScript.TakeDamage(enemyScript.GetAttackPower());
+            Debug.Log($"Enemy attack with {enemyScript.GetAttackPower()}"); playerScript.TakeDamage(enemyScript.GetAttackPower());
+            UpdatePlayerHP();
         }
 
         yield return new WaitForSeconds(0.5f); // small buffer
         PlayerTurn();
     }
+
+    public void RemoveEnemy(Enemy enemy)
+    {
+        if (enemies.Contains(enemy.gameObject))
+        {
+            enemies.Remove(enemy.gameObject);
+            AddEnergy(3);
+        }
+    }
+
 
 
     public void DoNothing()
@@ -215,12 +249,14 @@ public class BattleManager : MonoBehaviour
     {
         currentEnergy += energy;
         battleUIManager.UpdatePlayerEnergy(currentEnergy);
+        battleUIManager.PlayEffectText($"+{energy}", Color.blue, energyTransform.position);
     }
 
     public void RemoveEnergy(int energy)
     {
         currentEnergy -= energy;
         battleUIManager.UpdatePlayerEnergy(currentEnergy);
+        battleUIManager.PlayEffectText($"-{energy}", Color.blue, energyTransform.position);
     }
 
     public int GetCurrentEnergy()
@@ -233,6 +269,19 @@ public class BattleManager : MonoBehaviour
         currentTurn++;
         battleUIManager.UpdateCurrentTurn(currentTurn);
     }
+
+    public void IncreaseStage()
+    {
+        currentStage++;
+        battleUIManager.UpdateCurrentStage(currentStage);
+    }
+
+    public void UpdatePlayerHP()
+    {
+        battleUIManager.UpdatePlayerHealth(playerScript.CheckHealthInt());
+    }
+    
+
 }
 
 public enum BattleState

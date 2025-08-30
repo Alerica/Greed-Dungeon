@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     public void Heal(float amount)
     {
         Debug.Log($"Heal player by {amount}");
+        BattleManager.Instance.battleUIManager.PlayEffectText($"+{amount}", Color.green, BattleManager.Instance.hpTransform.position);
         if (health + amount > maxHealth)
         {
             health = maxHealth;
@@ -28,14 +29,31 @@ public class Player : MonoBehaviour
     public void TakeDamage(float rawDamage)
     {
         Debug.Log($"Player take {rawDamage}");
+        BattleManager.Instance.battleUIManager.PlayEffectText($"-{rawDamage}", Color.red, BattleManager.Instance.hpTransform.position);
         float actualDefense = baseDefense;
-        float damageReduction = 100 / 100 + actualDefense;
+        // Attack 100 
+        // defense 10  = 8% dr
+        // defense 66 = 33 dr%
+        // defense 200 = 60 dr%
+        // defense 900 = 90 dr%
+        float damageReduction = 100 / (100 + actualDefense);
         float actualDamage = rawDamage * damageReduction;
         health -= actualDamage;
         if (health < 0)
         {
+            health = 0;
             Die();
         }
+    }
+
+    public float CheckHealth()
+    {
+        return health;
+    }
+
+    public int CheckHealthInt()
+    {
+        return Mathf.RoundToInt(health);
     }
 
     public void Die()

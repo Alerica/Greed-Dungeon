@@ -22,32 +22,9 @@ public class Enemy : MonoBehaviour
         StartCoroutine(TakeDamageCoroutine(amount));
     }
 
-    public void TakeDamage(float amount, string source = null)
-    {
-        health -= amount * (100 / (100 + defense));
-
-        // Show floating text if banner exists
-        if (turnBanner != null)
-        {
-            string message = source != null ? $"{source}! -{Mathf.RoundToInt(amount)}!" : $"-{Mathf.RoundToInt(amount)}";
-            Color color = source switch
-            {
-                "Burn" => Color.red,
-                "Bleed" => new Color(0.6f, 0, 0), // dark red
-                _ => Color.white
-            };
-
-            turnBanner.ShowBanner(message, color);
-        }
-
-        if (health <= 0)
-            Die();
-    }
-
     public IEnumerator TakeDamageCoroutine(float amount, string source = null)
     {
         health -= amount * (100 / (100 + defense));
-
         // Show floating text if banner exists
         if (turnBanner != null)
         {
@@ -71,16 +48,23 @@ public class Enemy : MonoBehaviour
         statusEffects.Add(effect);
         Debug.Log($"{enemyName} received {effect.type} for {effect.turnsRemaining} turns");
 
+        // Assign once if needed
         if (turnBanner == null)
         {
             GameObject bannerObj = GameObject.FindGameObjectWithTag("TurnBanner");
             if (bannerObj != null)
                 turnBanner = bannerObj.GetComponent<TextVisualEffect>();
+        }
+
+        // Always show banner, even if already assigned
+        if (turnBanner != null)
+        {
             string bannerMessage = effect.type.ToString(); // e.g., "Stun", "Frost"
             Color bannerColor = GetEffectColor(effect.type);
             turnBanner.ShowBanner(bannerMessage, bannerColor);
         }
     }
+
 
     public IEnumerator ApplyStatusCoroutine(StatusEffect effect)
     {
@@ -161,6 +145,9 @@ public class Enemy : MonoBehaviour
     public void Die()
     {
         Debug.Log($"{enemyName} has been defeated!");
+        BattleManager.Instance.RemoveEnemy(this);
+        BattleManager.Instance.EndPlayerTurn();
+
         Destroy(gameObject);
     }
 }

@@ -20,3 +20,4 @@ MonoBehaviour:
   baseValue: 0
   effects:
   - {fileID: 11400000, guid: 01c59639a6b30184aa146e3e5e7cc93b, type: 2}
+  vfxPrefab: {fileID: 7424460830243675146, guid: 6b7ba61ddc93b5c4192e981467e3d244, type: 3}
