@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using GameAudio;
 
 namespace DiceSystem2D
 {
@@ -91,6 +92,7 @@ namespace DiceSystem2D
             int spinIndex = 0;
             bool hasSpin = spinSprites != null && spinSprites.Length > 0;
             int finalValue = ((_rng.Next() % 6) + 1);
+            AudioManager.I?.PlaySFX("DiceRoll");
 
             while (elapsed < rollDuration)
             {

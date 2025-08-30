@@ -481,6 +481,7 @@ GameObject:
   - component: {fileID: 122332001}
   - component: {fileID: 122332003}
   - component: {fileID: 122332002}
+  - component: {fileID: 122332005}
   m_Layer: 0
   m_Name: MANAGERS
   m_TagString: Untagged
@@ -577,6 +578,42 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &122332005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122332000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8aad397898564208b40e3d1b34fd34e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxLibrary:
+  - key: DiceRoll
+    clip: {fileID: 8300000, guid: 282a2f1a29bc74439a295e7279e19f57, type: 3}
+    volume: 0.259
+    pitchMin: 0.5
+    pitchMax: 0.47
+  - key: 
+    clip: {fileID: 0}
+    volume: 0
+    pitchMin: 0
+    pitchMax: 0
+  musicLibrary:
+  - key: 
+    clip: {fileID: 0}
+    volume: 0
+    pitchMin: 0
+    pitchMax: 0
+  initialSfxSources: 8
+  maxSfxSources: 24
+  musicCrossfade: 0.8
+  masterVolume: 1
+  musicVolume: 1
+  sfxVolume: 1
+  startMusicKey: 
 --- !u!114 &161195790 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1673555269102426438, guid: 5218bf106de11c94cb77a139057e880a, type: 3}
@@ -1899,17 +1936,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 371934281420040574, guid: b3e293d6d59a04bc9a50dd316a37ff2d, type: 3}
   m_PrefabInstance: {fileID: 1935474759077272155}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &688728739 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2955421460903398430, guid: b3e293d6d59a04bc9a50dd316a37ff2d, type: 3}
-  m_PrefabInstance: {fileID: 1935474759077272155}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d49634a14a214242a14d72d0bf993ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &691799237
 GameObject:
   m_ObjectHideFlags: 0
@@ -3003,7 +3029,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1676961402}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DiceSystem2D.Dice2D, Assembly-CSharp
         m_MethodName: RollFromButton
         m_Mode: 1
@@ -3245,7 +3271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diceContainer: {fileID: 1323585640}
-  dicePrefabUI: {fileID: 688728739}
+  dicePrefabUI: {fileID: 2955421460903398430, guid: b3e293d6d59a04bc9a50dd316a37ff2d, type: 3}
   addDiceButton: {fileID: 1155287955}
   rollButton: {fileID: 1838891424}
   totalText: {fileID: 1053964001}
@@ -4500,17 +4526,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675138194}
   m_CullTransparentMesh: 1
---- !u!114 &1676961402 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2352267605714600041, guid: 37230eb028c6943a8bf474aec9e79408, type: 3}
-  m_PrefabInstance: {fileID: 1868049886106538878}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d49634a14a214242a14d72d0bf993ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1731272117
 GameObject:
   m_ObjectHideFlags: 0
@@ -5232,7 +5247,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1676961402}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DiceSystem2D.Dice2D, Assembly-CSharp
         m_MethodName: RollFromButton
         m_Mode: 1
@@ -5924,67 +5939,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2085247795}
   m_CullTransparentMesh: 1
---- !u!1001 &1868049886106538878
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 92839544260670793, guid: 37230eb028c6943a8bf474aec9e79408, type: 3}
-      propertyPath: m_Name
-      value: Dice
-      objectReference: {fileID: 0}
-    - target: {fileID: 92839544260670793, guid: 37230eb028c6943a8bf474aec9e79408, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2665994939780312711, guid: 37230eb028c6943a8bf474aec9e79408, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 2665994939780312711, guid: 37230eb028c6943a8bf474aec9e79408, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2665994939780312711, guid: 37230eb028c6943a8bf474aec9e79408, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2665994939780312711, guid: 37230eb028c6943a8bf474aec9e79408, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2665994939780312711, guid: 37230eb028c6943a8bf474aec9e79408, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2665994939780312711, guid: 37230eb028c6943a8bf474aec9e79408, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2665994939780312711, guid: 37230eb028c6943a8bf474aec9e79408, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2665994939780312711, guid: 37230eb028c6943a8bf474aec9e79408, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2665994939780312711, guid: 37230eb028c6943a8bf474aec9e79408, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2665994939780312711, guid: 37230eb028c6943a8bf474aec9e79408, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 37230eb028c6943a8bf474aec9e79408, type: 3}
 --- !u!1001 &1935474759077272155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6072,14 +6026,6 @@ PrefabInstance:
     - target: {fileID: 371934281420040574, guid: b3e293d6d59a04bc9a50dd316a37ff2d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2955421460903398430, guid: b3e293d6d59a04bc9a50dd316a37ff2d, type: 3}
-      propertyPath: fixedSeed
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2955421460903398430, guid: b3e293d6d59a04bc9a50dd316a37ff2d, type: 3}
-      propertyPath: jumpHeight
-      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 7628353300576754674, guid: b3e293d6d59a04bc9a50dd316a37ff2d, type: 3}
       propertyPath: m_Name
@@ -6207,6 +6153,5 @@ SceneRoots:
   - {fileID: 691799239}
   - {fileID: 1850444002}
   - {fileID: 380808330}
-  - {fileID: 1868049886106538878}
   - {fileID: 93626961}
   - {fileID: 770777162}
