@@ -346,19 +346,6 @@ public class BattleManager : MonoBehaviour
         return deck.Count;
     }
 
-    public void AddCardToDeck(CardData newCard)
-    {
-        if (newCard != null)
-        {
-            deckList.Add(newCard);
-            Debug.Log($"Added {newCard.cardName} to deck. Deck now has {deckList.Count} cards.");
-        }
-        else
-        {
-            Debug.LogWarning("Tried to add a null card to the deck!");
-        }
-    }
-
     public void AddEnergy(int energy)
     {
         currentEnergy += energy;
