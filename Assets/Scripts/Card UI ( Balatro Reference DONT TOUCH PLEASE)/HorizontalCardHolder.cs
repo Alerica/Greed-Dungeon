@@ -174,7 +174,7 @@ public class HorizontalCardHolder : MonoBehaviour
         // Spawn a new Card under this hand
         GameObject cardGO = Instantiate(slotPrefab, transform);
         Card newCard = cardGO.GetComponentInChildren<Card>();
-        
+
         // Setup card data → this automatically spawns CardVisual under VisualCardsHandler
         newCard.Setup(drawn);
 

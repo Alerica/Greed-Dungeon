@@ -346,7 +346,7 @@ public class CardVisual : MonoBehaviour
 
     public IEnumerator DelayedDestroy()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.5f);
         Destroy(parentCard.transform.parent.gameObject);
     }
 
