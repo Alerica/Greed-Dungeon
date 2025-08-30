@@ -187,4 +187,14 @@ public class HorizontalCardHolder : MonoBehaviour
         cards.Add(newCard);
     }
 
+    public void ClearAllCards()
+    {
+        foreach (Transform child in transform)
+        {
+            Destroy(child.gameObject); // destroys slotPrefab + contained Card
+        }
+        cards.Clear();
+    }
+
+
 }

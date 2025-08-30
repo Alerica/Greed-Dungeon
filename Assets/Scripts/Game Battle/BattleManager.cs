@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using UnityEditor;
 using System.Collections;
+using TMPro;
 
 public class BattleManager : MonoBehaviour
 {
@@ -10,12 +11,15 @@ public class BattleManager : MonoBehaviour
 
     [Header("Deck Settings")]
     public List<CardData> deckList = new List<CardData>();
+    private List<CardData> startingDeck; // assign in Inspector
     private Queue<CardData> deck = new Queue<CardData>();
 
     [Header("Enemy Settings")]
     public EnemySpawner enemySpawner;
     public int enemiesToSpawn = 1;
     public List<GameObject> enemies = new List<GameObject>();
+    private int enemiesDefeated = 0;
+    private int bossDefeated = 0;
 
     [Header("Player")]
     public GameObject player;
@@ -46,6 +50,14 @@ public class BattleManager : MonoBehaviour
     [SerializeField] private GameObject choicePanel;
     [SerializeField] private GameObject rewardPanel;
 
+    [SerializeField] private TextMeshProUGUI monsterDefeatedText;
+    [SerializeField] private TextMeshProUGUI bossDefeatedText;
+    [SerializeField] private TextMeshProUGUI currentStageText;
+
+    [Header("Rewards")]
+    public int gamePoints;
+
+
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -59,6 +71,7 @@ public class BattleManager : MonoBehaviour
     void Start()
     {
         ShuffleDeck(deckList);
+        startingDeck = deckList;
         if (playerScript == null) player.GetComponent<Player>();
     }
 
@@ -129,7 +142,36 @@ public class BattleManager : MonoBehaviour
         choicePanel.SetActive(false);
         Debug.Log("Player chose to retreat!");
         rewardPanel.SetActive(true);
+        CountReward();
+        ResetGame();
     }
+
+    public void CountReward()
+    {
+        int basePoints = 100; // Base Points
+        int enemiesDefeatedPoints = (80 + currentStage * 3) * enemiesDefeated;
+        int bossDefeatedpoints = 1000 * bossDefeated;
+        int currentStagePoints = basePoints + currentStage * 5 * currentStage; // 105, 120, 
+        gamePoints += enemiesDefeatedPoints + bossDefeatedpoints + currentStagePoints;
+
+        monsterDefeatedText.text = $"{enemiesDefeatedPoints}";
+        bossDefeatedText.text = $"{bossDefeatedpoints}";
+        currentStageText.text = $"{currentStagePoints}";
+
+
+        Debug.Log($"Current Points : {gamePoints}");
+    }
+
+    public void ResetGame()
+    {
+        playerScript.Heal(1000);
+        currentStage = 0;
+        currentEnergy = 5;
+        currentState = BattleState.NotStarted;
+        cardHolder.ClearAllCards();
+        ResetDeck();
+        
+    } 
 
     private void ContinueToStage()
     {
@@ -226,6 +268,7 @@ public class BattleManager : MonoBehaviour
         if (enemies.Contains(enemy.gameObject))
         {
             enemies.Remove(enemy.gameObject);
+            enemiesDefeated++;
             AddEnergy(3);
         }
     }
@@ -262,6 +305,12 @@ public class BattleManager : MonoBehaviour
     }
 
     // Deck Management
+
+    public void ResetDeck()
+    {
+        ShuffleDeck(startingDeck);
+        Debug.Log("Deck has been reset and shuffled.");
+    }
     public CardData DrawFromDeck()
     {
         if (deck.Count == 0)
@@ -269,7 +318,9 @@ public class BattleManager : MonoBehaviour
             Debug.Log("Deck is empty!");
             return null;
         }
+
         Debug.Log("Drew card: " + deck.Peek().cardName);
+        Debug.Log("Card Remaining : " + GetDeckCount());
         return deck.Dequeue();
     }
 
@@ -290,9 +341,15 @@ public class BattleManager : MonoBehaviour
         deck = new Queue<CardData>(shuffled);
     }
 
+    public int GetDeckCount()
+    {
+        return deck.Count;
+    }
+
     public void AddEnergy(int energy)
     {
         currentEnergy += energy;
+        if (currentEnergy > maxEnergy) currentEnergy = maxEnergy;
         battleUIManager.UpdatePlayerEnergy(currentEnergy);
         battleUIManager.PlayEffectText($"+{energy}", Color.blue, energyTransform.position);
     }
