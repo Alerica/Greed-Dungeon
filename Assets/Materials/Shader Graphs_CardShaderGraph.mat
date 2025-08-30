@@ -52,6 +52,7 @@ Material:
     m_Floats:
     - _DisplacementIntensity: 0
     - _EDITION: 0
+    - _Emmision_Strength: 3
     - _Frequency: 1
     - _Power: 0.25
     - _QueueControl: 0
