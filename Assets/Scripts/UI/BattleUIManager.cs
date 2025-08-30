@@ -8,7 +8,11 @@ public class BattleUIManager : MonoBehaviour
     [SerializeField] private TMP_Text playerEnergyText;
     [SerializeField] private TMP_Text playerMaxEnergyText;
     [SerializeField] private TMP_Text currentTurnText;
+    [SerializeField] private TMP_Text currentStageText;
     [SerializeField] private TMP_Text enemiesCountText;
+
+    [SerializeField] private FloatingText floatingTextPrefab;
+    [SerializeField] private Canvas uiCanvas;
 
     public void ShowBattleUI()
     {
@@ -30,6 +34,11 @@ public class BattleUIManager : MonoBehaviour
         playerEnergyText.text = $"{energy}";
     }
 
+    public void PlayEffectText(string message, Color color, Vector3 position)
+    {
+        SpawnFloatingText(message, color, position);
+    }
+
     public void UpdateCurrentTurn(int turn)
     {
         currentTurnText.text = $"{turn}";
@@ -43,7 +52,19 @@ public class BattleUIManager : MonoBehaviour
     public void UpdateEnemiesCount()
     {
         enemiesCountText.text = $"{BattleManager.Instance.enemies.Count}";
-    } 
+    }
+
+    public void UpdateCurrentStage(int stage)
+    {
+        currentStageText.text = $"{stage}";
+    }
+
+    private void SpawnFloatingText(string message, Color color, Vector3 worldPos)
+    {
+        FloatingText ft = Instantiate(floatingTextPrefab, uiCanvas.transform);
+        ft.Play(message, color, worldPos);
+    }
+
 
 
 }

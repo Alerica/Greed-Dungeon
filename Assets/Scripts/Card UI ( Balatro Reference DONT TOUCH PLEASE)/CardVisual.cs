@@ -319,34 +319,67 @@ public class CardVisual : MonoBehaviour
     // Apply the card effects
     private void UseCard()
     {
-        if (BattleManager.Instance.GetCurrentEnergy() <= parentCard.cardData.energyCost)
+        if (parentCard.cardData.cardName == "Thunder Bolt")
         {
-            Debug.Log("Not enough energy!");
-            return;
-        }
-        BattleManager.Instance.RemoveEnergy(parentCard.cardData.energyCost);
-
-        Debug.Log("Playing effect");
-        foreach (var effect in parentCard.cardData.effects)
-        {
-            // Pick a random enemy for enemy-targeted effects
-            GameObject target = null;
-            List<GameObject> aliveEnemies = BattleManager.Instance.enemies.Where(e => e != null).ToList();
-            if (aliveEnemies.Count > 0)
+            LightningSpawner spawner = FindFirstObjectByType<LightningSpawner>();
+            if (spawner != null)
             {
-                target = aliveEnemies[UnityEngine.Random.Range(0, aliveEnemies.Count)];
+                spawner.CastLightning();
             }
-
-            // Apply effect (utility effects can ignore target)
-            effect.Apply(target);
         }
+        else
+        {
+            GenericSpawner spawner = FindFirstObjectByType<GenericSpawner>();
+            if (spawner != null)
+            {
+                spawner.Cast(parentCard.cardData.vfxPrefab); // pass cardData or prefab
+            }
+        }
+
+
+        StartCoroutine(UseCardCaroutine());
         StartCoroutine(DelayedDestroy());
-        GetComponent<CanvasGroup>().alpha = 0;
+        GetComponent<CanvasGroup>().alpha = 0;      
     }
 
+    private IEnumerator UseCardCaroutine()
+    {
+        if (BattleManager.Instance.GetCurrentEnergy() < parentCard.cardData.energyCost)
+        {
+            Debug.Log("Not enough energy!");
+        }
+        else
+        {
+            BattleManager.Instance.RemoveEnergy(parentCard.cardData.energyCost);
+
+            Debug.Log("Playing effect");
+            int i = 0;
+            foreach (var effect in parentCard.cardData.effects)
+            {
+                // Pick a random enemy for enemy-targeted effects
+                GameObject target = null;
+                List<GameObject> aliveEnemies = BattleManager.Instance.enemies.Where(e => e != null).ToList();
+                if (aliveEnemies.Count > 0)
+                {
+                    target = aliveEnemies[UnityEngine.Random.Range(0, aliveEnemies.Count)];
+                }
+
+                // Apply effect (utility effects can ignore target)
+                StartCoroutine(DelayedApply(0.7f * i, effect, target));
+                i++;
+            }
+        }
+        yield return new WaitForSeconds(0.1f);
+    }
+
+     public IEnumerator DelayedApply(float delay, CardEffect effect, GameObject target)
+    {
+        yield return new WaitForSeconds(delay);
+        effect.Apply(target);
+    }
     public IEnumerator DelayedDestroy()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(2f);
         Destroy(parentCard.transform.parent.gameObject);
     }
 
