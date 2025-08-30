@@ -28,6 +28,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: e63fba139e92744aca651dfeee7fe118, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Emmision:
+        m_Texture: {fileID: 2800000, guid: 27dd053a7438a24499643a5f202c76e9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: b6c8558f7a88f480eaeb3bbd9c9a9d9e, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -58,6 +62,7 @@ Material:
     - _poly_power: 0.2
     - _yDirection: 1
     m_Colors:
+    - _Glow_Color: {r: 95.87452, g: 95.87452, b: 95.87452, a: 1}
     - _Rotation: {r: 0, g: 0, b: 0, a: 0}
     - _Tiling: {r: 0, g: 0, b: 0, a: 0}
     - _Vector2: {r: -0.16, g: 0, b: 0, a: 0}
