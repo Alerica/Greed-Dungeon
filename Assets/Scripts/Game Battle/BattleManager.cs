@@ -42,6 +42,10 @@ public class BattleManager : MonoBehaviour
     [Header("Input Blocker")]
     [SerializeField] private GameObject inputBlocker;
 
+    [Header("Choice Panel")]
+    [SerializeField] private GameObject choicePanel;
+    [SerializeField] private GameObject rewardPanel;
+
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -107,14 +111,14 @@ public class BattleManager : MonoBehaviour
 
     private void ShowRetreatOrContinueUI()
     {
-        // TODO: Show UI panel with 2 buttons: Retreat / Continue
-        // Hook buttons to Call OnRetreat() and OnContinue()
+        choicePanel.SetActive(true);
         Debug.Log("Choose: Retreat or Continue?");
     }
 
     // Called by UI Button
     public void OnContinue()
     {
+        choicePanel.SetActive(false);
         Debug.Log("Player chose to continue!");
         ContinueToStage();
     }
@@ -122,8 +126,9 @@ public class BattleManager : MonoBehaviour
     // Called by UI Button
     public void OnRetreat()
     {
+        choicePanel.SetActive(false);
         Debug.Log("Player chose to retreat!");
-        // TODO: Retreat logic goes here
+        rewardPanel.SetActive(true);
     }
 
     private void ContinueToStage()
