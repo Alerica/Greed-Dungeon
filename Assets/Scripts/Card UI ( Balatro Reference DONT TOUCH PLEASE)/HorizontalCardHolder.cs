@@ -91,15 +91,15 @@ public class HorizontalCardHolder : MonoBehaviour
     {
         cards = cards.Where(c => c != null).ToList();
 
-        // if (Input.GetKeyDown(KeyCode.Delete))
-        // {
-        //     if (hoveredCard != null)
-        //     {
-        //         Destroy(hoveredCard.transform.parent.gameObject);
-        //         cards.Remove(hoveredCard);
+        if (Input.GetKeyDown(KeyCode.Delete))
+        {
+            if (hoveredCard != null)
+            {
+                Destroy(hoveredCard.transform.parent.gameObject);
+                cards.Remove(hoveredCard);
 
-        //     }
-        // }
+            }
+        }
 
         if (Input.GetMouseButtonDown(1))
         {
@@ -174,7 +174,7 @@ public class HorizontalCardHolder : MonoBehaviour
         // Spawn a new Card under this hand
         GameObject cardGO = Instantiate(slotPrefab, transform);
         Card newCard = cardGO.GetComponentInChildren<Card>();
-
+        
         // Setup card data → this automatically spawns CardVisual under VisualCardsHandler
         newCard.Setup(drawn);
 

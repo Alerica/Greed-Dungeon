@@ -21,8 +21,8 @@ public class ShaderCode : MonoBehaviour
         editions[0] = "REGULAR";
         editions[1] = "POLYCHROME";
         editions[2] = "REGULAR";
-        editions[3] = "NEGATIVE";
-
+        // editions[3] = "NEGATIVE";
+        editions[3] = "POLYCHROME";
         for (int i = 0; i < image.material.enabledKeywords.Length; i++)
         {
             image.material.DisableKeyword(image.material.enabledKeywords[i]);

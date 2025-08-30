@@ -64,14 +64,12 @@ public class Enemy : MonoBehaviour
                 _ => Color.white
             };
 
-            yield return turnBanner.ShowBannerCoroutine(message, color); // wait for banner animation
+            yield return turnBanner.ShowBannerCoroutine(message, color, 0.6f); // wait for banner animation
         }
 
         if (health <= 0)
             Die();
     }
-
-
 
     public void ApplyStatus(EnemyStatusEffect effect)
     {
@@ -89,10 +87,32 @@ public class Enemy : MonoBehaviour
         }
     }
     
+    public IEnumerator ApplyStatusCoroutine(EnemyStatusEffect effect)
+    {
+        statusEffects.Add(effect);
+        Debug.Log($"{enemyName} received {effect.type} for {effect.turnsRemaining} turns");
+
+        if (turnBanner == null)
+        {
+            GameObject bannerObj = GameObject.FindGameObjectWithTag("TurnBanner");
+            if (bannerObj != null)
+                turnBanner = bannerObj.GetComponent<TextVisualEffect>(); // assuming TurnBanner is your banner class
+        }
+
+        if (turnBanner != null)
+        {
+            string bannerMessage = effect.type.ToString(); // e.g., "Stun", "Frost"
+            Color bannerColor = GetEffectColor(effect.type);
+            yield return turnBanner.ShowBannerCoroutine(bannerMessage, bannerColor); // wait for animation
+        }
+    }
+
+    
     private Color GetEffectColor(StatusType type)
     {
-        switch(type)
+        switch (type)
         {
+            case StatusType.Burn: return Color.red;
             case StatusType.Stun: return Color.yellow;
             case StatusType.Frost: return Color.cyan;
             case StatusType.Bleed: return Color.red;
@@ -105,40 +125,6 @@ public class Enemy : MonoBehaviour
     }
 
     // Call this at the **start or end of each enemy turn**
-    public void ProcessTurnEffects()
-    {
-        for (int i = statusEffects.Count - 1; i >= 0; i--)
-        {
-            var effect = statusEffects[i];
-            switch (effect.type)
-            {
-                case StatusType.Burn:
-                    TakeDamage(effect.value, "Burn");
-                    break;
-                case StatusType.Bleed:
-                    TakeDamage(effect.value, "Bleed");
-                    break;
-                case StatusType.DefenseReduction:
-                    // defense effect handled elsewhere
-                    break;
-                case StatusType.Stun:
-                    // skip actions if stunned
-                    break;
-                case StatusType.Frost:
-                    enemyDamageModifier = Mathf.Max(0, enemyDamageModifier - effect.value);
-                    break;
-                case StatusType.Gnawed:
-                    TakeDamage(transform.GetComponent<Enemy>().health * 0.05f * effect.value, "Gnawed");
-                    break;
-                // add other status logic here
-            }
-
-            effect.turnsRemaining--;
-            if (effect.turnsRemaining <= 0)
-                statusEffects.RemoveAt(i);
-        }
-    }
-
     public IEnumerator ProcessTurnEffectsCoroutine()
     {
         for (int i = statusEffects.Count - 1; i >= 0; i--)
@@ -168,9 +154,6 @@ public class Enemy : MonoBehaviour
                 statusEffects.RemoveAt(i);
         }
     }
-
-
-
 
     public float GetHealth() => health;
 

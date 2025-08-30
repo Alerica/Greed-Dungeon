@@ -925,10 +925,6 @@ MonoBehaviour:
   descriptionPopup: {fileID: 8728028913326885960}
   descriptionPopupText: {fileID: 23992691833453439}
   holdTimeToShow: 0.5
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  hoverApplyDelay: 0.5
   nameText: {fileID: 89279906025443279}
   costText: {fileID: 2628770423671691548}
   descriptionText: {fileID: 987561667415403154}
@@ -962,8 +958,8 @@ CanvasGroup:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7310339964073049012}
-  m_Enabled: 0
-  m_Alpha: 0
+  m_Enabled: 1
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0

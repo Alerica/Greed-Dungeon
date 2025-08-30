@@ -61,7 +61,7 @@ public class BattleManager : MonoBehaviour
     {
         Debug.Log("Battle Started!");
         if (turnBanner) turnBanner.ShowBanner("BATTLE START!", Color.yellow);
-        yield return Wait(0.6f, () => DoNothing());
+        yield return Wait(0.2f, () => DoNothing());
 
         for (int i = 0; i < initialCardsInHand; i++)
         {

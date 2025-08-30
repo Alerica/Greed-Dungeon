@@ -81,8 +81,9 @@ public class CardVisual : MonoBehaviour
     [SerializeField] private TextMeshProUGUI nameText;
     [SerializeField] private TextMeshProUGUI costText;
     [SerializeField] private TextMeshProUGUI descriptionText;
+    [SerializeField] private Transform deckTransform;
 
-
+    
     public void SetData()
     {
         CardData data = parentCard.cardData;
@@ -97,10 +98,28 @@ public class CardVisual : MonoBehaviour
                 descriptionText.text = data.description;
             if (cardImage != null && data.artwork != null)
                 cardImage.sprite = data.artwork;
+            transform.position = deckTransform.position;
         }
         else
         {
             Debug.LogWarning("CardData is null in CardVisual.SetData()");
+        }
+    }
+
+    private void Awake()
+    {
+        if (deckTransform == null)
+        {
+            GameObject deckObj = GameObject.FindGameObjectWithTag("Deck");
+            if (deckObj != null)
+            {
+                deckTransform = deckObj.transform;
+            }
+            else
+            {
+                Debug.LogWarning("Deck object with tag 'Deck' not found!");
+                deckTransform = transform;
+            }
         }
     }
 
@@ -241,6 +260,14 @@ public class CardVisual : MonoBehaviour
         if (IsInTopHalf() && BattleManager.Instance.GetCurrentEnergy() >= parentCard.cardData.energyCost)
         {
             UseCard();
+            if (TryGetComponent<CanvasGroup>(out var canvasGroup))
+            {
+                canvasGroup.alpha = 0f; // hide
+            }
+            else
+            {
+                gameObject.SetActive(false); // fallback
+            }
         }
         else
         {
@@ -313,9 +340,14 @@ public class CardVisual : MonoBehaviour
             // Apply effect (utility effects can ignore target)
             effect.Apply(target);
         }
+        StartCoroutine(DelayedDestroy());
+        GetComponent<CanvasGroup>().alpha = 0;
+    }
 
+    public IEnumerator DelayedDestroy()
+    {
+        yield return new WaitForSeconds(0.1f);
         Destroy(parentCard.transform.parent.gameObject);
-        
     }
 
 
