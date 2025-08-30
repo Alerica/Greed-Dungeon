@@ -262,6 +262,9 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5647236407421411534, guid: bddd0263814164da396aa8d1438dd810, type: 3}
   m_PrefabInstance: {fileID: 6530647097373671602}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!1 &59164042
 GameObject:
@@ -4956,7 +4959,10 @@ CanvasRenderer:
   m_GameObject: {fileID: 1146980306}
   m_CullTransparentMesh: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!224 &1152277730 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5647236407421411534, guid: bddd0263814164da396aa8d1438dd810, type: 3}
@@ -5138,12 +5144,18 @@ RectTransform:
   - {fileID: 755623750}
   - {fileID: 1480070035}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
   - {fileID: 919415142}
   - {fileID: 1374143836}
   - {fileID: 1086429490}
   - {fileID: 311091444}
   - {fileID: 138776808}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   m_Father: {fileID: 2074635280}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6499,7 +6511,10 @@ CanvasRenderer:
   m_GameObject: {fileID: 1821316531}
   m_CullTransparentMesh: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!224 &1848359438 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5647236407421411534, guid: bddd0263814164da396aa8d1438dd810, type: 3}
@@ -7281,6 +7296,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+  - {fileID: 4704011139686014859}
+>>>>>>> Stashed changes
 =======
   - {fileID: 4704011139686014859}
 >>>>>>> Stashed changes
@@ -7532,6 +7551,9 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!224 &699769777518725512
 RectTransform:
