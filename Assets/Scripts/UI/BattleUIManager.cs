@@ -6,7 +6,9 @@ public class BattleUIManager : MonoBehaviour
     [SerializeField] private GameObject battleUIPanel;
     [SerializeField] private TMP_Text playerHealthText;
     [SerializeField] private TMP_Text playerEnergyText;
+    [SerializeField] private TMP_Text playerMaxEnergyText;
     [SerializeField] private TMP_Text currentTurnText;
+    [SerializeField] private TMP_Text enemiesCountText;
 
     public void ShowBattleUI()
     {
@@ -32,6 +34,16 @@ public class BattleUIManager : MonoBehaviour
     {
         currentTurnText.text = $"{turn}";
     }
+
+    public void UpdatePlayerMaxEnergy(int maxEnergy)
+    {
+        playerMaxEnergyText.text = $"{maxEnergy}";
+    }
+
+    public void UpdateEnemiesCount()
+    {
+        enemiesCountText.text = $"{BattleManager.Instance.enemies.Count}";
+    } 
 
 
 }
