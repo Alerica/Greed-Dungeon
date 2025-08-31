@@ -126,7 +126,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7772477421989590330}
-  - component: {fileID: 6403813207610311510}
+  - component: {fileID: 1491082476249923655}
+  - component: {fileID: -5850853965386596715}
   m_Layer: 0
   m_Name: Flame Shot
   m_TagString: Untagged
@@ -150,7 +151,7 @@ Transform:
   - {fileID: 9181001355453240804}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6403813207610311510
+--- !u!114 &1491082476249923655
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,6 +160,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 7424460830243675146}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2e7084ecf82d4c6886c9a728d310668, type: 3}
+  m_Script: {fileID: 11500000, guid: bb6302198d5804362b62be3d0b73d87c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-5850853965386596715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7424460830243675146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b32b2e2a83d0e4ba0a63f915e075b159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

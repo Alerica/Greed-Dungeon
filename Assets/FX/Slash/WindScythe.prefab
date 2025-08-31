@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4330816422201431736}
+  - component: {fileID: -440156672733697718}
+  - component: {fileID: -5830939963853235541}
   m_Layer: 0
   m_Name: WindScythe
   m_TagString: Untagged
@@ -32,6 +34,30 @@ Transform:
   - {fileID: 1968524126025864391}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-440156672733697718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5886385882467514047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e552d583383941c588c1b7bf60f7092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-5830939963853235541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5886385882467514047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c48915e138874f3692b2103dc30b4b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8393734328924906648
 GameObject:
   m_ObjectHideFlags: 0
