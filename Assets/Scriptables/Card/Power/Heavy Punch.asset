@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Heavy Punch
   m_EditorClassIdentifier: 
   cardName: Heavy Punch
-  description: 
+  description: Smashes the enemy with a powerful fist dealing 8 damage and stunning
+    them for 1.
   artwork: {fileID: -3399444401737557985, guid: fa320e380a97072408799d33a934b743, type: 3}
-  energyCost: 0
+  energyCost: 2
   cardType: 0
   baseValue: 0
   effects: []

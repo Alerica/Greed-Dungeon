@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Stab
   m_EditorClassIdentifier: 
   cardName: Stab
-  description: 
+  description: Stab the enemy dealing 6 damage, and inflict [bleeding] 2
   artwork: {fileID: -5312497963641247122, guid: fbf73b6a2537b894db8879247fce8987, type: 3}
-  energyCost: 0
+  energyCost: 2
   cardType: 0
   baseValue: 0
   effects: []

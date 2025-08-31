@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Long Term Investment
   m_EditorClassIdentifier: 
   cardName: Long Term
-  description: Gain [X] energy, next turn
+  description: Gain 5 energy
   artwork: {fileID: 21300000, guid: 7b7bc3e7ecb33224ebf5cf527e8a0d2c, type: 3}
-  energyCost: 1
+  energyCost: 3
   cardType: 2
-  baseValue: 1
+  baseValue: 0
   effects:
-  - {fileID: 11400000, guid: ea2d0cbf9c55c4c48a8051b56e14f9fc, type: 2}
-  vfxPrefab: {fileID: 5886385882467514047, guid: 05d5f0073769c014fb448c2a26966501, type: 3}
+  - {fileID: 11400000, guid: 6295184b506299d4e845ce5bec25e27e, type: 2}
+  vfxPrefab: {fileID: 0}

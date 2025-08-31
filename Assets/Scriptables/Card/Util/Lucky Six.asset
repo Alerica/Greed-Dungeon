@@ -13,13 +13,10 @@ MonoBehaviour:
   m_Name: Lucky Six
   m_EditorClassIdentifier: 
   cardName: Lucky Six
-  description: Lucky Six
+  description: Roll one 6-sided dice, if its 6, draw 2 card. Otherwise, draw 1 card
   artwork: {fileID: 21300000, guid: 40726c56a88637445a00d923b08ae693, type: 3}
-  energyCost: 1
+  energyCost: 0
   cardType: 2
   baseValue: 0
-  effects:
-  - {fileID: 11400000, guid: ea2d0cbf9c55c4c48a8051b56e14f9fc, type: 2}
-  - {fileID: 11400000, guid: ea2d0cbf9c55c4c48a8051b56e14f9fc, type: 2}
-  - {fileID: 11400000, guid: ea2d0cbf9c55c4c48a8051b56e14f9fc, type: 2}
-  vfxPrefab: {fileID: 5925710103267668280, guid: f6cd1baa5e3728743a2156ab1b1b8d59, type: 3}
+  effects: []
+  vfxPrefab: {fileID: 0}

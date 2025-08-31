@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Frost Bite
   description: 
-  artwork: {fileID: 0}
+  artwork: {fileID: -697594760697349610, guid: 4cf40c072f29c3e4886d8407dfd467f0, type: 3}
   energyCost: 0
   cardType: 0
   baseValue: 0

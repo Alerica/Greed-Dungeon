@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Shot
   m_EditorClassIdentifier: 
   cardName: Shot
-  description: 
+  description: Shot the enemy with an arrow dealing 3 damage
   artwork: {fileID: -2625406059805260970, guid: 0622ff0f1cb22b44c806b86bc2a96423, type: 3}
-  energyCost: 0
+  energyCost: 1
   cardType: 0
   baseValue: 0
   effects: []

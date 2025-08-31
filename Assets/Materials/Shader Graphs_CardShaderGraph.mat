@@ -12,7 +12,7 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _EDITION_REGULAR
+  - _EDITION_POLYCHROME
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -20,7 +20,7 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties: 
+  m_LockedProperties: _poly_power
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -33,7 +33,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: b6c8558f7a88f480eaeb3bbd9c9a9d9e, type: 3}
+        m_Texture: {fileID: 2800000, guid: fba130c49a17cce46ada797797f819f1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -51,7 +51,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _DisplacementIntensity: 0
-    - _EDITION: 0
+    - _EDITION: 1
     - _Emmision_Strength: 3
     - _Frequency: 1
     - _Power: 0.25

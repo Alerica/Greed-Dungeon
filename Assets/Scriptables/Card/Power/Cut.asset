@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Cut
   m_EditorClassIdentifier: 
   cardName: Cut
-  description: 
+  description: 'Rapidly attack the enemy dealing 3 * 4 damage, and inflict [bleeding]'
   artwork: {fileID: 1509163340474212072, guid: f27d6f19a63edaa459d4ffc385edb10c, type: 3}
-  energyCost: 0
+  energyCost: 3
   cardType: 0
   baseValue: 0
   effects: []

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Punch
   m_EditorClassIdentifier: 
   cardName: Punch
-  description: 
+  description: Strikes the enemy with your fist dealing 3 damage.
   artwork: {fileID: -4335222134116007343, guid: a7870f75ae72f8f49a51e4d53ae9cac1, type: 3}
-  energyCost: 0
+  energyCost: 1
   cardType: 0
   baseValue: 0
   effects: []

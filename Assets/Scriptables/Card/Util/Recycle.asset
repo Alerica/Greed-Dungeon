@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Recycle
   m_EditorClassIdentifier: 
   cardName: Recycle
-  description: 
+  description: Draw a card, not really usefull I guess.
   artwork: {fileID: -151337346990368438, guid: 8df2908af647a4c4987992cd9bb443d0, type: 3}
   energyCost: 0
   cardType: 2
   baseValue: 0
-  effects: []
+  effects:
+  - {fileID: 11400000, guid: 3e9b55dc7cb4e8240b5395dcc0c9b05c, type: 2}
   vfxPrefab: {fileID: 0}

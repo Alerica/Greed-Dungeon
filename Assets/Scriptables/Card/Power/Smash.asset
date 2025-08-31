@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Smash
   m_EditorClassIdentifier: 
   cardName: Smash
-  description: 
+  description: 'Smash enemy with a mace, Dealing 4 Damage '
   artwork: {fileID: 4205024740364508292, guid: 689a6ea53aa682b4fadd0f7120355b20, type: 3}
-  energyCost: 0
+  energyCost: 1
   cardType: 0
   baseValue: 0
   effects: []

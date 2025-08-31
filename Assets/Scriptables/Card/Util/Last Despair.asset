@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Last Despair
   m_EditorClassIdentifier: 
   cardName: Last Despair
-  description: 
+  description: Draw Card for each 10 HP you Lost
   artwork: {fileID: 2335079258276052718, guid: df8a6c2ed24ef9e48ab26f5ebef89bc7, type: 3}
-  energyCost: 0
+  energyCost: 2
   cardType: 2
   baseValue: 0
-  effects: []
+  effects:
+  - {fileID: 11400000, guid: 27bbabca939f94f4cbbdebc1e5dae2bc, type: 2}
   vfxPrefab: {fileID: 0}

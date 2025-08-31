@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Frost Shot
   m_EditorClassIdentifier: 
   cardName: Frost Shot
-  description: 
+  description: Fires an icy projectile at your enemy dealing 12 damage and applying
+    Frost.for  2 turn.
   artwork: {fileID: 21300000, guid: 3aa65d2944d502e4e8138765c718d269, type: 3}
-  energyCost: 0
+  energyCost: 3
   cardType: 0
   baseValue: 0
   effects: []

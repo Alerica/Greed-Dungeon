@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Borrowed Time
   m_EditorClassIdentifier: 
   cardName: Borrowed Time
-  description: 
+  description: Gain +2 energy this turn.
   artwork: {fileID: 4140610556561879283, guid: 3f4f35012c9a3d647b19835c06c44393, type: 3}
   energyCost: 0
   cardType: 2
   baseValue: 0
-  effects: []
+  effects:
+  - {fileID: 11400000, guid: ea2d0cbf9c55c4c48a8051b56e14f9fc, type: 2}
   vfxPrefab: {fileID: 0}

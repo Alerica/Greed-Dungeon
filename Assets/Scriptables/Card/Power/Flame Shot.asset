@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Flame Shot
   m_EditorClassIdentifier: 
   cardName: Flame Shot
-  description: 
+  description: '"Fires a flaming projectile at your enemy dealing 14 damage and applying
+    Burn. for  2 turn."'
   artwork: {fileID: 21300000, guid: 25072f299a41c934e962825ade3b83c9, type: 3}
-  energyCost: 0
+  energyCost: 3
   cardType: 0
   baseValue: 0
   effects: []

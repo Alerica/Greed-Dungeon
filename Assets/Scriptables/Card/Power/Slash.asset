@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Slash
   m_EditorClassIdentifier: 
   cardName: Slash
-  description: 
+  description: Slash through the enemy and dealing 4 damage
   artwork: {fileID: 4176362632249098406, guid: 5197337d58736024a86239e69e6118ea, type: 3}
-  energyCost: 0
+  energyCost: 1
   cardType: 0
   baseValue: 0
   effects: []

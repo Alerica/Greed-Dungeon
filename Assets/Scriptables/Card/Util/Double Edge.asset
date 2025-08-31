@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Double Edge
   m_EditorClassIdentifier: 
   cardName: Double Edge
-  description: 
+  description: Draw 7 cards, then lose 50 HP.
   artwork: {fileID: -8946914204902871072, guid: e69fe0a5e08c79c44b78d12814ede865, type: 3}
   energyCost: 0
   cardType: 2
   baseValue: 0
-  effects: []
+  effects:
+  - {fileID: 11400000, guid: f85434fddb964a64293af0a4a5076399, type: 2}
+  - {fileID: 11400000, guid: 855976364aee7544a9f2046a8fa9792f, type: 2}
   vfxPrefab: {fileID: 0}

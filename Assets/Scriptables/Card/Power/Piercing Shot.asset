@@ -15,7 +15,7 @@ MonoBehaviour:
   cardName: Piercing Shot
   description: Desc
   artwork: {fileID: 21300000, guid: 3aa71bab302dff34ea6a08f0a5294196, type: 3}
-  energyCost: 1
+  energyCost: 4
   cardType: 0
   baseValue: 0
   effects:

@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Lightning Shot
   m_EditorClassIdentifier: 
   cardName: Lightning Shot
-  description: ....
+  description: Shoots a bolt of lightning at your enemy dealing  5 damage and stunning
+    them for   1 turn.
   artwork: {fileID: -3743984086224929051, guid: 9192328be4808324ca7550b02531445e, type: 3}
-  energyCost: 1
+  energyCost: 3
   cardType: 0
   baseValue: 0
   effects:
