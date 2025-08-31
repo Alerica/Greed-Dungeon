@@ -16,9 +16,11 @@ MonoBehaviour:
   description: Call a big meteor towards an enemy dealing 18 amount of damage and
     applies burning
   artwork: {fileID: -4084487760487837083, guid: f2978fb046ad46240b7f022840aceaf9, type: 3}
-  energyCost: 0
+  energyCost: 3
   cardType: 0
   baseValue: 0
-  effects: []
-  vfxPrefab: {fileID: 2683737577759083391, guid: e0f2a00af2c910e4f80a2005d9585c57, type: 3}
+  effects:
+  - {fileID: 11400000, guid: b74c8ba7d51bbcb43b39c25958efbff9, type: 2}
+  - {fileID: 11400000, guid: 01c59639a6b30184aa146e3e5e7cc93b, type: 2}
+  vfxPrefab: {fileID: 3177395863028515962, guid: a2443fea97b9f9a459e5f37aa7252988, type: 3}
   repeatCount: 1

@@ -16,9 +16,12 @@ MonoBehaviour:
   description: Stomp the ground and create a huge earthquake dealing  7 damage 3
     times to your enemies
   artwork: {fileID: -2932612526820762341, guid: cc07e4c2630095e4781acd68474e11be, type: 3}
-  energyCost: 0
+  energyCost: 4
   cardType: 0
   baseValue: 0
-  effects: []
-  vfxPrefab: {fileID: 2683737577759083391, guid: e0f2a00af2c910e4f80a2005d9585c57, type: 3}
+  effects:
+  - {fileID: 11400000, guid: c693c17b3e6ceec40bba4b9759682bdd, type: 2}
+  - {fileID: 11400000, guid: c693c17b3e6ceec40bba4b9759682bdd, type: 2}
+  - {fileID: 11400000, guid: c693c17b3e6ceec40bba4b9759682bdd, type: 2}
+  vfxPrefab: {fileID: 1090652646650202896, guid: 2dd69e8f662b1f84986bf14f6e34227d, type: 3}
   repeatCount: 1

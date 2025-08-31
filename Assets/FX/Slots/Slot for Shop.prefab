@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press Click to Skip
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 91007223b23165f4395c2927c6f032f5, type: 2}
-  m_sharedMaterial: {fileID: -5217627201637139596, guid: 91007223b23165f4395c2927c6f032f5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ca47afaf5a7623c43bfb193711c36cde, type: 2}
+  m_sharedMaterial: {fileID: 573356811038041471, guid: ca47afaf5a7623c43bfb193711c36cde, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -265,10 +265,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 89601c88f4854a24295188d8cc81722f, type: 2}
   - {fileID: 11400000, guid: b593ee9669a96684d8bfdff2fa203dc2, type: 2}
   - {fileID: 11400000, guid: 0d5d1baaf259c304fb5a1852d443a2a5, type: 2}
-  - {fileID: 11400000, guid: ff998fbdc34ca34468e8838cec7ae655, type: 2}
-  - {fileID: 11400000, guid: 14d2854cb0d32ba468bc2842dcdcbaba, type: 2}
-  - {fileID: 11400000, guid: 5d79bc7a8ccac83439d8e3cb8ffb3dad, type: 2}
-  - {fileID: 11400000, guid: 23f906f440b25984a9e63b489f672fb6, type: 2}
   - {fileID: 11400000, guid: 0205f41e2c376e042b2920bc55012cb5, type: 2}
   - {fileID: 11400000, guid: 1103aff6cd1fcdd49bed7a2e40d9cf29, type: 2}
   - {fileID: 11400000, guid: 5be834b1b9a5571458f037d8b4d7cb32, type: 2}
@@ -291,19 +287,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4927c56c128fdb44e914231784f95ad7, type: 2}
   - {fileID: 11400000, guid: 87d16b14d0c0a9c45bd1c22524047a0f, type: 2}
   - {fileID: 11400000, guid: 28ffdcbe5fa77004185606f17d3d943b, type: 2}
-  - {fileID: 11400000, guid: 00cfd764917202e4391ea65c46fa0c91, type: 2}
-  - {fileID: 11400000, guid: ba78b559893bd804cb5b15e4b794dab2, type: 2}
-  - {fileID: 11400000, guid: 7707aa68cd105d348947ba088c0adfec, type: 2}
-  - {fileID: 11400000, guid: 7bd5fccba8057b7419b1fae3cec4da95, type: 2}
-  - {fileID: 11400000, guid: 125c0e179b50e0044aa25ba07cf9665a, type: 2}
-  - {fileID: 11400000, guid: 30a2fad50f1dc6342aacea52dbbd0259, type: 2}
   - {fileID: 11400000, guid: ec215e28c11af7440b0de8ed4097cf3b, type: 2}
   - {fileID: 11400000, guid: 59c550cd03672d147bb9e722f3f13192, type: 2}
   - {fileID: 11400000, guid: a704faa1cd430734abb5354710d6a9a5, type: 2}
   - {fileID: 11400000, guid: 819a9b936a67fd14892fe96fae2c7a52, type: 2}
-  ChanceToWinGold: 0.05
-  ChanceToWinSilver: 0.35
-  ChanceToWinBronze: 0.6
+  ChanceToWinGold: 0.15
+  ChanceToWinSilver: 0.3
+  ChanceToWinBronze: 0.55
   texts:
   - {fileID: 3158718765663779952}
   - {fileID: 7438072016998485291}

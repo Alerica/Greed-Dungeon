@@ -10,6 +10,7 @@ public class BattleUIManager : MonoBehaviour
     [SerializeField] private TMP_Text currentTurnText;
     [SerializeField] private TMP_Text currentStageText;
     [SerializeField] private TMP_Text enemiesCountText;
+    [SerializeField] private TMP_Text cardCountText;
 
     [SerializeField] private FloatingText floatingTextPrefab;
     [SerializeField] private Canvas uiCanvas;
@@ -57,6 +58,11 @@ public class BattleUIManager : MonoBehaviour
     public void UpdateCurrentStage(int stage)
     {
         currentStageText.text = $"{stage}";
+    }
+
+    public void UpdateCardCount(int count)
+    {
+        cardCountText.text = $"{count}";
     }
 
     private void SpawnFloatingText(string message, Color color, Vector3 worldPos)

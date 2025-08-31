@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 
 public class BattleManager : MonoBehaviour
 {
@@ -148,7 +149,7 @@ public class BattleManager : MonoBehaviour
 
     public void CountReward()
     {
-        int basePoints = 100; // Base Points
+        int basePoints = 10; // Base Points
         int enemiesDefeatedPoints = (80 + currentStage * 3) * enemiesDefeated;
         int bossDefeatedpoints = 1000 * bossDefeated;
         int currentStagePoints = basePoints + currentStage * 5 * currentStage; // 105, 120, 
@@ -210,6 +211,16 @@ public class BattleManager : MonoBehaviour
         Debug.Log($"Player's Turn {currentTurn}");
         if (turnBanner) turnBanner.ShowBanner("PLAYER TURN!", Color.cyan);
         currentState = BattleState.PlayerTurn;
+
+        if (playerScript.CheckHealth() <= 0)
+        {
+            currentState = BattleState.NotStarted;
+            Debug.Log("Player has been defeated!");
+            if (turnBanner) turnBanner.ShowBanner("YOU DIED!", Color.red);
+            ResetGame();
+            CountReward();
+            rewardPanel.SetActive(true);
+        }
     }
 
     public void EndPlayerTurn()
@@ -287,7 +298,9 @@ public class BattleManager : MonoBehaviour
     {
         if (enemies.Contains(enemy.gameObject))
         {
+            
             enemies.Remove(enemy.gameObject);
+            if(enemy.gameObject) Destroy(enemy.gameObject);
             enemiesDefeated++;
             AddEnergy(3);
         }

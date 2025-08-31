@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Smash
   m_EditorClassIdentifier: 
   cardName: Smash
-  description: 'Smash enemy with a mace, Dealing 4 Damage '
+  description: 'Smash enemy with a mace, Dealing 15 Damage '
   artwork: {fileID: 4205024740364508292, guid: 689a6ea53aa682b4fadd0f7120355b20, type: 3}
-  energyCost: 1
+  energyCost: 2
   cardType: 0
   baseValue: 0
-  effects: []
-  vfxPrefab: {fileID: 2683737577759083391, guid: e0f2a00af2c910e4f80a2005d9585c57, type: 3}
+  effects:
+  - {fileID: 11400000, guid: 58540eb7ffeaffc47a9672e3608b8d87, type: 2}
+  vfxPrefab: {fileID: 1090652646650202896, guid: 2dd69e8f662b1f84986bf14f6e34227d, type: 3}
   repeatCount: 1

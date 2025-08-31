@@ -185,6 +185,7 @@ public class HorizontalCardHolder : MonoBehaviour
         newCard.EndDragEvent.AddListener(EndDrag);
 
         cards.Add(newCard);
+        BattleManager.Instance.battleUIManager.UpdateCardCount(BattleManager.Instance.GetDeckCount());
     }
 
 }

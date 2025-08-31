@@ -96,6 +96,9 @@ MonoBehaviour:
   attackPower: 20
   enemyDamageModifier: 1.2
   statusEffects: []
+  isDamageReductionApplied: 0
+  isBoss: 1
+  isStunned: 0
   turnBanner: {fileID: 0}
 --- !u!95 &7989444737123374804
 Animator:

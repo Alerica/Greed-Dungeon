@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Shot
   m_EditorClassIdentifier: 
   cardName: Shot
-  description: Shot the enemy with an arrow dealing 3 damage
+  description: Shot the enemy with an arrow dealing 4 damage
   artwork: {fileID: -2625406059805260970, guid: 0622ff0f1cb22b44c806b86bc2a96423, type: 3}
   energyCost: 1
   cardType: 0
   baseValue: 0
-  effects: []
-  vfxPrefab: {fileID: 2683737577759083391, guid: e0f2a00af2c910e4f80a2005d9585c57, type: 3}
+  effects:
+  - {fileID: 11400000, guid: 43f2b565a437a7048a18764597ff91c2, type: 2}
+  vfxPrefab: {fileID: 7424460830243675146, guid: 16418069069d13748957ea8ad15eb6c6, type: 3}
   repeatCount: 1

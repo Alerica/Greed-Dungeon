@@ -19,6 +19,6 @@ MonoBehaviour:
   cardType: 2
   baseValue: 0
   effects:
-  - {fileID: 11400000, guid: ea2d0cbf9c55c4c48a8051b56e14f9fc, type: 2}
+  - {fileID: 11400000, guid: cc57e9082cfd6dd4ab51310f84dfed14, type: 2}
   vfxPrefab: {fileID: 4257335352507171315, guid: 4e15d7949e5435746a257c42918b2ce1, type: 3}
   repeatCount: 1

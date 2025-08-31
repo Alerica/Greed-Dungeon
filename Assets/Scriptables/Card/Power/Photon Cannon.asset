@@ -19,6 +19,7 @@ MonoBehaviour:
   energyCost: 1
   cardType: 0
   baseValue: 0
-  effects: []
-  vfxPrefab: {fileID: 2683737577759083391, guid: e0f2a00af2c910e4f80a2005d9585c57, type: 3}
+  effects:
+  - {fileID: 11400000, guid: ac579e91755962a41bcf01ab5d0f3d52, type: 2}
+  vfxPrefab: {fileID: 2360520836338439290, guid: c0f3e84df7a83a74c93bd0801062e7ca, type: 3}
   repeatCount: 1

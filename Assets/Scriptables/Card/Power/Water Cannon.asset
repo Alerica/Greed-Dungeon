@@ -15,9 +15,12 @@ MonoBehaviour:
   cardName: Water Cannon
   description: Shoots a spray of water towarnds an enemy dealing 3 Damage 3 times
   artwork: {fileID: -3157240915573338057, guid: 9b6c0c91099930c449d023c4b02236d8, type: 3}
-  energyCost: 0
+  energyCost: 2
   cardType: 0
   baseValue: 0
-  effects: []
-  vfxPrefab: {fileID: 2683737577759083391, guid: e0f2a00af2c910e4f80a2005d9585c57, type: 3}
+  effects:
+  - {fileID: 11400000, guid: 2ca4f6e982bdd1c4889a7297898c8ba2, type: 2}
+  - {fileID: 11400000, guid: 2ca4f6e982bdd1c4889a7297898c8ba2, type: 2}
+  - {fileID: 11400000, guid: 2ca4f6e982bdd1c4889a7297898c8ba2, type: 2}
+  vfxPrefab: {fileID: 1509306879172686537, guid: c13cabeb2f6f1e24cad40a22923cf196, type: 3}
   repeatCount: 1

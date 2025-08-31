@@ -16,9 +16,11 @@ MonoBehaviour:
   description: Shoots a quick lightning that chains through all your enemies  dealing
     6 amount of damage stunning enemies for 1 turn
   artwork: {fileID: 5991739518503250151, guid: c0298890b8eadfb439a0a4d20c18c027, type: 3}
-  energyCost: 0
+  energyCost: 2
   cardType: 0
   baseValue: 0
-  effects: []
-  vfxPrefab: {fileID: 2683737577759083391, guid: e0f2a00af2c910e4f80a2005d9585c57, type: 3}
+  effects:
+  - {fileID: 11400000, guid: ac579e91755962a41bcf01ab5d0f3d52, type: 2}
+  - {fileID: 11400000, guid: 06b55c68fc122af48a4586b31f5dea1b, type: 2}
+  vfxPrefab: {fileID: 2360520836338439290, guid: 73e3f135f69fcae4e8ec34184c4d0c20, type: 3}
   repeatCount: 1

@@ -15,9 +15,11 @@ MonoBehaviour:
   cardName: Tidal Wave Power
   description: Summons a wave to crush your enemies dealing 25 damage
   artwork: {fileID: -8311721513158010389, guid: 3f7f32463d7c0544d813f62b819bf23b, type: 3}
-  energyCost: 0
+  energyCost: 4
   cardType: 0
   baseValue: 0
-  effects: []
-  vfxPrefab: {fileID: 2683737577759083391, guid: e0f2a00af2c910e4f80a2005d9585c57, type: 3}
+  effects:
+  - {fileID: 11400000, guid: b74c8ba7d51bbcb43b39c25958efbff9, type: 2}
+  - {fileID: 11400000, guid: 962a8e0cf8b25cd449fe7c0530eaf1d6, type: 2}
+  vfxPrefab: {fileID: 1570704790946165287, guid: c0d637d5707b4af4490202c691e5e683, type: 3}
   repeatCount: 1

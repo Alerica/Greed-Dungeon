@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Punch
   m_EditorClassIdentifier: 
   cardName: Punch
-  description: Strikes the enemy with your fist dealing 3 damage.
+  description: Strikes the enemy with your fist dealing 4 damage.
   artwork: {fileID: -4335222134116007343, guid: a7870f75ae72f8f49a51e4d53ae9cac1, type: 3}
   energyCost: 1
   cardType: 0
   baseValue: 0
-  effects: []
-  vfxPrefab: {fileID: 2683737577759083391, guid: e0f2a00af2c910e4f80a2005d9585c57, type: 3}
+  effects:
+  - {fileID: 11400000, guid: 43f2b565a437a7048a18764597ff91c2, type: 2}
+  vfxPrefab: {fileID: 1090652646650202896, guid: 2dd69e8f662b1f84986bf14f6e34227d, type: 3}
   repeatCount: 1

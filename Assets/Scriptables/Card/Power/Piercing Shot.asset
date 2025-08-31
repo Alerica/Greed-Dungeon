@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Piercing Shot
   m_EditorClassIdentifier: 
   cardName: Piercing Shot
-  description: Pierces the enemy with a sharp thrust dealing 5 damage.
+  description: Pierces the enemy with a sharp thrust dealing 20 damage.
   artwork: {fileID: 21300000, guid: 3aa71bab302dff34ea6a08f0a5294196, type: 3}
   energyCost: 4
   cardType: 0
   baseValue: 0
   effects:
-  - {fileID: 11400000, guid: 962a8e0cf8b25cd449fe7c0530eaf1d6, type: 2}
+  - {fileID: 11400000, guid: b74c8ba7d51bbcb43b39c25958efbff9, type: 2}
   vfxPrefab: {fileID: 7424460830243675146, guid: 6d397a82bfd4295438fa2d1c5bf45218, type: 3}
   repeatCount: 1

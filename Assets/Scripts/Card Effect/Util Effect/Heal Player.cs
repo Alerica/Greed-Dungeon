@@ -8,6 +8,7 @@ public class HealPlayer : CardEffect
     public override void Apply(GameObject target)
     {
         BattleManager.Instance.playerScript.Heal(healAmount);
+        BattleManager.Instance.battleUIManager.UpdatePlayerHealth(BattleManager.Instance.playerScript.CheckHealthInt());
         Debug.Log($"Player healed for {healAmount}");
     }
 }

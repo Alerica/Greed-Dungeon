@@ -167,7 +167,5 @@ public class Enemy : MonoBehaviour
         BattleManager.Instance.RemoveEnemy(this);
         BattleManager.Instance.EndPlayerTurn();
         
-
-        Destroy(gameObject);
     }
 }

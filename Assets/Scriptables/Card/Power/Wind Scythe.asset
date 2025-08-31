@@ -14,11 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Wind Scythe
   description: Summons the wind spirits to form a scythe that slash so fast that
-    it is invisible to the naked eye dealing 15 damage and gain a turn
+    it is invisible to the naked eye dealing 15 damage
   artwork: {fileID: -4797714587304735829, guid: 155057a98489f8842a300279fbb5b7bf, type: 3}
-  energyCost: 0
+  energyCost: 2
   cardType: 0
   baseValue: 0
-  effects: []
-  vfxPrefab: {fileID: 2683737577759083391, guid: e0f2a00af2c910e4f80a2005d9585c57, type: 3}
+  effects:
+  - {fileID: 11400000, guid: 58540eb7ffeaffc47a9672e3608b8d87, type: 2}
+  vfxPrefab: {fileID: 5886385882467514047, guid: c4778494cad0b93478b2a81684ffd229, type: 3}
   repeatCount: 1

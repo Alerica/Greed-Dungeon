@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Gambling Addict
   m_EditorClassIdentifier: 
   cardName: Gambling Addict
-  description: Enemy has more chance for better reward, but has a chance to drop
-    less reward
+  description: Try your luck!
   artwork: {fileID: 21300000, guid: f98253b9adb655642af82a488cc02177, type: 3}
   energyCost: 0
   cardType: 2
   baseValue: 0
-  effects: []
+  effects:
+  - {fileID: 11400000, guid: 3e9b55dc7cb4e8240b5395dcc0c9b05c, type: 2}
   vfxPrefab: {fileID: 733661716173403411, guid: e262f0dd8c929554b93c9f2d42f2c861, type: 3}
   repeatCount: 1
