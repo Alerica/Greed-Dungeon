@@ -527,9 +527,13 @@ MonoBehaviour:
   cardDrawPerTurn: 1
   currentStage: 1
   currentTurn: 0
+  bGAnimator: {fileID: 0}
   battleUIManager: {fileID: 122332003}
   cardHolder: {fileID: 172948517}
   turnBanner: {fileID: 1310301259}
+  energyTransform: {fileID: 0}
+  hpTransform: {fileID: 0}
+  inputBlocker: {fileID: 0}
 --- !u!114 &122332002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -562,7 +566,10 @@ MonoBehaviour:
   playerEnergyText: {fileID: 1595504345}
   playerMaxEnergyText: {fileID: 731515827}
   currentTurnText: {fileID: 1516452217}
+  currentStageText: {fileID: 0}
   enemiesCountText: {fileID: 0}
+  floatingTextPrefab: {fileID: 0}
+  uiCanvas: {fileID: 0}
 --- !u!4 &122332004
 Transform:
   m_ObjectHideFlags: 0
@@ -593,14 +600,109 @@ MonoBehaviour:
   sfxLibrary:
   - key: DiceRoll
     clip: {fileID: 8300000, guid: 282a2f1a29bc74439a295e7279e19f57, type: 3}
-    volume: 0.259
+    volume: 0.55
     pitchMin: 0.5
-    pitchMax: 0.47
-  - key: 
-    clip: {fileID: 0}
-    volume: 0
-    pitchMin: 0
-    pitchMax: 0
+    pitchMax: 1
+  - key: arrow
+    clip: {fileID: 8300000, guid: aa983d24b3ba7457b9c1ce275bab6122, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: drone
+    clip: {fileID: 8300000, guid: ba41ff3f613c04fea9bdf66a1fe05546, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: slash
+    clip: {fileID: 8300000, guid: 1012769e7ed004b3a9e10d0454dc082c, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: thrusht
+    clip: {fileID: 8300000, guid: 9488a1ec5d6f844dab4a8544609dec97, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: fire
+    clip: {fileID: 8300000, guid: 69f95bb26f8d7487ab4977ffafee9721, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: ice
+    clip: {fileID: 8300000, guid: 4728c07e6e86c455090f698c684159c8, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: thunder
+    clip: {fileID: 8300000, guid: 870602b18a54043a791baa77a412a5b3, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: water
+    clip: {fileID: 8300000, guid: a4e882441acd94420b45008c24646cbd, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: wind
+    clip: {fileID: 8300000, guid: 0c79ad79eb14449d480b981a169b1921, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: 'earth '
+    clip: {fileID: 8300000, guid: 0910d86b2bb3c45fd83cb7fe38236111, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: 'light '
+    clip: {fileID: 8300000, guid: 278d66db5646147939e1415674649406, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: dark
+    clip: {fileID: 8300000, guid: 426907284001347e69f0236a9444fffe, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: buff
+    clip: {fileID: 8300000, guid: 12148323c9eda4d3184cb49680d11d97, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: utils
+    clip: {fileID: 8300000, guid: e8132f0dac14d4b9f8715ccb2a9a2daf, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: death
+    clip: {fileID: 8300000, guid: 26d929538a2f94f02b8ec7a026cb55f5, type: 3}
+    volume: 0.55
+    pitchMin: 0.3
+    pitchMax: 1
+  - key: cursed
+    clip: {fileID: 8300000, guid: 4b0fbf30365194f6c9e7539c05b7ea83, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: win
+    clip: {fileID: 8300000, guid: 3c8a37210d86a4020b00f701029d6f44, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: Books
+    clip: {fileID: 8300000, guid: ef1b9a726b7c24101b69536b68650ae0, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: loses
+    clip: {fileID: 8300000, guid: 231afe300d16b4c07903647628054df8, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: death
+    clip: {fileID: 8300000, guid: 26d929538a2f94f02b8ec7a026cb55f5, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
   musicLibrary:
   - key: 
     clip: {fileID: 0}
@@ -5114,18 +5216,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1310301261}
-        m_TargetAssemblyTypeName: GenericSpawner, Assembly-CSharp
-        m_MethodName: Cast
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1570704790946165287, guid: c0d637d5707b4af4490202c691e5e683, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1830664775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6151,7 +6241,7 @@ SceneRoots:
   - {fileID: 2082938801}
   - {fileID: 703808577}
   - {fileID: 691799239}
-  - {fileID: 1850444002}
   - {fileID: 380808330}
+  - {fileID: 1850444002}
   - {fileID: 93626961}
   - {fileID: 770777162}
