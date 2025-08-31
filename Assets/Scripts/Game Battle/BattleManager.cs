@@ -29,7 +29,7 @@ public class BattleManager : MonoBehaviour
     public int initialCardsInHand = 5;
     public int cardDrawPerTurn = 1;
     private int currentEnergy = 5;
-    private int maxEnergy = 10;
+    private int maxEnergy = 15;
 
     public int currentStage = 0;
     public int currentTurn = 0;
@@ -194,7 +194,7 @@ public class BattleManager : MonoBehaviour
         inputBlocker.SetActive(false);
         for (int i = 0; i < cardDrawPerTurn; i++) cardHolder.DrawCard();
 
-        AddEnergy(1);
+        AddEnergy(2);
         IncreaseTurn();
         UpdatePlayerHP();
 

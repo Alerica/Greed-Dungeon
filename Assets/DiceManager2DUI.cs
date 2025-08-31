@@ -46,7 +46,7 @@ namespace DiceSystem2D
             for (int i = 0; i < count; i++)
             {
                 if (diceList.Count >= hardMaxDice) break;
-                var d = Instantiate(dicePrefabUI, diceContainer);
+                var d = Instantiate(dicePrefabUI, diceContainer.transform);
                 diceList.Add(d);
                 added++;
             }
