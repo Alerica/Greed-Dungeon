@@ -86,24 +86,28 @@ public class CardVisual : MonoBehaviour
     
     public void SetData()
     {
-        CardData data = parentCard.cardData;
+        CardData data = null;
+        if (parentCard)
+        {
+            data = parentCard.cardData;
+        }
 
         if (data != null)
-        {
-            if (nameText != null)
-                nameText.text = data.cardName;
-            if (costText != null)
-                costText.text = data.energyCost.ToString();
-            if (descriptionText != null)
-                descriptionText.text = data.description;
-            if (cardImage != null && data.artwork != null)
-                cardImage.sprite = data.artwork;
-            transform.position = deckTransform.position;
-        }
-        else
-        {
-            Debug.LogWarning("CardData is null in CardVisual.SetData()");
-        }
+            {
+                if (nameText != null)
+                    nameText.text = data.cardName;
+                if (costText != null)
+                    costText.text = data.energyCost.ToString();
+                if (descriptionText != null)
+                    descriptionText.text = data.description;
+                if (cardImage != null && data.artwork != null)
+                    cardImage.sprite = data.artwork;
+                transform.position = deckTransform.position;
+            }
+            else
+            {
+                Debug.LogWarning("CardData is null in CardVisual.SetData()");
+            }
     }
 
     private void Awake()
