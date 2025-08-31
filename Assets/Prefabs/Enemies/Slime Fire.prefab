@@ -93,7 +93,7 @@ MonoBehaviour:
   maxHealth: 20
   health: 20
   defense: 5
-  attackPower: 8
+  attackPower: 14
   enemyDamageModifier: 1
   statusEffects: []
   turnBanner: {fileID: 0}

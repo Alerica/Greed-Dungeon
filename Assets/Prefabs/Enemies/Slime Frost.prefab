@@ -90,10 +90,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyName: Slime
-  maxHealth: 20
-  health: 20
-  defense: 5
-  attackPower: 8
+  maxHealth: 10
+  health: 10
+  defense: 20
+  attackPower: 5
   enemyDamageModifier: 1
   statusEffects: []
   turnBanner: {fileID: 0}
