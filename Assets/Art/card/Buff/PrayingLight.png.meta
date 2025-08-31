@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 083776d9b9a08dd4cb7a0da90f5adffd
+guid: bd50557089c00f74bb658dfd31c9a6ea
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8210900623493180095
-    second: Sacrafice_0
+      213: 4588917619597631623
+    second: PrayingLight_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sacrafice_0
+      name: PrayingLight_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fba28552d9af2f170800000000000000
-      internalID: 8210900623493180095
+      spriteID: 780e5ab034c1faf30800000000000000
+      internalID: 4588917619597631623
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sacrafice_0: 8210900623493180095
+      PrayingLight_0: 4588917619597631623
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

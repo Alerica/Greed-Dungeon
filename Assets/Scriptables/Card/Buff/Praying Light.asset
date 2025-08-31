@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1c97fcb3a58bc044b27f86ce41972e0, type: 3}
-  m_Name: Long Term Investment
+  m_Name: Praying Light
   m_EditorClassIdentifier: 
-  cardName: Long Term
-  description: Gain 5 energy
-  artwork: {fileID: 21300000, guid: 7b7bc3e7ecb33224ebf5cf527e8a0d2c, type: 3}
-  energyCost: 3
-  cardType: 2
+  cardName: Praying Light
+  description: Pray for the magic of the gods increasing Light type attack by 10
+    amount for the next 2 turn
+  artwork: {fileID: 4588917619597631623, guid: bd50557089c00f74bb658dfd31c9a6ea, type: 3}
+  energyCost: 2
+  cardType: 1
   baseValue: 0
-  effects:
-  - {fileID: 11400000, guid: 6295184b506299d4e845ce5bec25e27e, type: 2}
-  vfxPrefab: {fileID: 4257335352507171315, guid: 4e15d7949e5435746a257c42918b2ce1, type: 3}
+  effects: []
+  vfxPrefab: {fileID: 4257335352507171315, guid: 09b6fd4060275804bb1e322bbeb46100, type: 3}
   repeatCount: 1
