@@ -127,6 +127,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7772477421989590330}
   - component: {fileID: 6403813207610311510}
+  - component: {fileID: 6760053359119155651}
   m_Layer: 0
   m_Name: Flame Shot
   m_TagString: Untagged
@@ -160,5 +161,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2e7084ecf82d4c6886c9a728d310668, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6760053359119155651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7424460830243675146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb6302198d5804362b62be3d0b73d87c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -766,7 +766,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &471594546
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1075,7 +1075,7 @@ MonoBehaviour:
   m_text: FIGHT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 91007223b23165f4395c2927c6f032f5, type: 2}
-  m_sharedMaterial: {fileID: 0}
+  m_sharedMaterial: {fileID: -5217627201637139596, guid: 91007223b23165f4395c2927c6f032f5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1244,6 +1244,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1370726056}
+        m_TargetAssemblyTypeName: GameAudio.AudioManager, Assembly-CSharp
+        m_MethodName: PlayMusic_ByKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: lobby
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &573151711
@@ -1674,6 +1686,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1370726056}
+        m_TargetAssemblyTypeName: GameAudio.AudioManager, Assembly-CSharp
+        m_MethodName: PlayMusic_ByKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: world
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &695903037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1929,6 +1953,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1370726056}
+        m_TargetAssemblyTypeName: GameAudio.AudioManager, Assembly-CSharp
+        m_MethodName: PlayMusic_ByKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: shop
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &841327025
@@ -2730,6 +2766,7 @@ GameObject:
   - component: {fileID: 1370726054}
   - component: {fileID: 1370726053}
   - component: {fileID: 1370726055}
+  - component: {fileID: 1370726056}
   m_Layer: 0
   m_Name: MANAGERS
   m_TagString: Untagged
@@ -2858,6 +2895,162 @@ MonoBehaviour:
   OnTotalRolled:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1370726056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370726050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8aad397898564208b40e3d1b34fd34e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxLibrary:
+  - key: DiceRoll
+    clip: {fileID: 8300000, guid: 282a2f1a29bc74439a295e7279e19f57, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: arrow
+    clip: {fileID: 8300000, guid: aa983d24b3ba7457b9c1ce275bab6122, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: drone
+    clip: {fileID: 8300000, guid: ba41ff3f613c04fea9bdf66a1fe05546, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: slash
+    clip: {fileID: 8300000, guid: 1012769e7ed004b3a9e10d0454dc082c, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: thrusht
+    clip: {fileID: 8300000, guid: 9488a1ec5d6f844dab4a8544609dec97, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: fire
+    clip: {fileID: 8300000, guid: 69f95bb26f8d7487ab4977ffafee9721, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: ice
+    clip: {fileID: 8300000, guid: 4728c07e6e86c455090f698c684159c8, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: thunder
+    clip: {fileID: 8300000, guid: 870602b18a54043a791baa77a412a5b3, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: water
+    clip: {fileID: 8300000, guid: a4e882441acd94420b45008c24646cbd, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: wind
+    clip: {fileID: 8300000, guid: 0c79ad79eb14449d480b981a169b1921, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: 'earth '
+    clip: {fileID: 8300000, guid: 0910d86b2bb3c45fd83cb7fe38236111, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: 'light '
+    clip: {fileID: 8300000, guid: 278d66db5646147939e1415674649406, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: dark
+    clip: {fileID: 8300000, guid: 426907284001347e69f0236a9444fffe, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: buff
+    clip: {fileID: 8300000, guid: 12148323c9eda4d3184cb49680d11d97, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: utils
+    clip: {fileID: 8300000, guid: e8132f0dac14d4b9f8715ccb2a9a2daf, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: death
+    clip: {fileID: 8300000, guid: 26d929538a2f94f02b8ec7a026cb55f5, type: 3}
+    volume: 0.55
+    pitchMin: 0.3
+    pitchMax: 1
+  - key: cursed
+    clip: {fileID: 8300000, guid: 4b0fbf30365194f6c9e7539c05b7ea83, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: win
+    clip: {fileID: 8300000, guid: 3c8a37210d86a4020b00f701029d6f44, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: Books
+    clip: {fileID: 8300000, guid: ef1b9a726b7c24101b69536b68650ae0, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: loses
+    clip: {fileID: 8300000, guid: 231afe300d16b4c07903647628054df8, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: draw
+    clip: {fileID: 8300000, guid: 9f0116bf58c9b4ac1b80e9c6b19e648c, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  - key: death
+    clip: {fileID: 8300000, guid: 26d929538a2f94f02b8ec7a026cb55f5, type: 3}
+    volume: 0.55
+    pitchMin: 0.5
+    pitchMax: 1
+  musicLibrary:
+  - key: shop
+    clip: {fileID: 8300000, guid: e725ed79afa4f4929998041d91e0594a, type: 3}
+    volume: 0.5
+    pitchMin: 0.5
+    pitchMax: 0
+  - key: world
+    clip: {fileID: 8300000, guid: ac14da825682d4a8fa75ed5fe4b9f27d, type: 3}
+    volume: 0.5
+    pitchMin: 0.5
+    pitchMax: 0
+  - key: lobby
+    clip: {fileID: 8300000, guid: 257893b9f41934e66a0ab6b7eab5a124, type: 3}
+    volume: 0.5
+    pitchMin: 0.5
+    pitchMax: 0
+  - key: lobby
+    clip: {fileID: 8300000, guid: 257893b9f41934e66a0ab6b7eab5a124, type: 3}
+    volume: 0.5
+    pitchMin: 0.5
+    pitchMax: 0
+  - key: Boss
+    clip: {fileID: 8300000, guid: d403ba78362524b3ca4e52e348296fce, type: 3}
+    volume: 0.5
+    pitchMin: 0.5
+    pitchMax: 0
+  initialSfxSources: 8
+  maxSfxSources: 24
+  musicCrossfade: 0.8
+  masterVolume: 1
+  musicVolume: 1
+  sfxVolume: 1
+  startMusicKey: lobby
 --- !u!1 &1373039108
 GameObject:
   m_ObjectHideFlags: 0
@@ -3022,7 +3215,7 @@ MonoBehaviour:
   m_text: Card
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 91007223b23165f4395c2927c6f032f5, type: 2}
-  m_sharedMaterial: {fileID: 0}
+  m_sharedMaterial: {fileID: -5217627201637139596, guid: 91007223b23165f4395c2927c6f032f5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4869,6 +5062,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1370726056}
+        m_TargetAssemblyTypeName: GameAudio.AudioManager, Assembly-CSharp
+        m_MethodName: PlayMusic_ByKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: lobby
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!224 &1119144305760917396
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5308,6 +5513,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1370726056}
+        m_TargetAssemblyTypeName: GameAudio.AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX_ByKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: won
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &1579929831827768075
@@ -6082,7 +6299,7 @@ MonoBehaviour:
   m_text: Continue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 91007223b23165f4395c2927c6f032f5, type: 2}
-  m_sharedMaterial: {fileID: 0}
+  m_sharedMaterial: {fileID: -5217627201637139596, guid: 91007223b23165f4395c2927c6f032f5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10711,7 +10928,7 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 91007223b23165f4395c2927c6f032f5, type: 2}
-  m_sharedMaterial: {fileID: 0}
+  m_sharedMaterial: {fileID: -5217627201637139596, guid: 91007223b23165f4395c2927c6f032f5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
