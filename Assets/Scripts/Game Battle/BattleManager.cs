@@ -175,6 +175,7 @@ public class BattleManager : MonoBehaviour
 
     private void ContinueToStage()
     {
+        maxEnergy += 1;
         for (int i = 0; i < enemiesToSpawn; i++)
         {
             GameObject enemyObj = enemySpawner.SpawnEnemy(false);
@@ -194,7 +195,7 @@ public class BattleManager : MonoBehaviour
         inputBlocker.SetActive(false);
         for (int i = 0; i < cardDrawPerTurn; i++) cardHolder.DrawCard();
 
-        AddEnergy(2);
+        AddEnergy(3);
         IncreaseTurn();
         UpdatePlayerHP();
 
@@ -256,8 +257,18 @@ public class BattleManager : MonoBehaviour
                 Debug.Log($"{enemy.name} finished turn effects!");
             }
 
-            Debug.Log($"Enemy attack with {enemyScript.GetAttackPower()}"); playerScript.TakeDamage(enemyScript.GetAttackPower());
-            UpdatePlayerHP();
+            if (enemyScript.isStunned)
+            {
+                Debug.Log($"{enemy.name} is stunned and skips its attack!");
+                if (turnBanner) yield return turnBanner.ShowBannerCoroutine($"{enemyScript.name} is Stunned!", Color.yellow);
+                continue; // Skip attack if stunned
+            }
+            else
+            {
+                Debug.Log($"Enemy attack with {enemyScript.GetAttackPower()}"); playerScript.TakeDamage(enemyScript.GetAttackPower());
+                UpdatePlayerHP();
+            }
+            
         }
 
         yield return new WaitForSeconds(0.5f); // small buffer
