@@ -7,7 +7,7 @@ using TMPro;
 public class BattleManager : MonoBehaviour
 {
     public static BattleManager Instance { get; private set; }
-    BattleState currentState = BattleState.NotStarted;
+    public BattleState currentState = BattleState.NotStarted;
 
     [Header("Deck Settings")]
     public List<CardData> deckList = new List<CardData>();
@@ -177,7 +177,7 @@ public class BattleManager : MonoBehaviour
     {
         for (int i = 0; i < enemiesToSpawn; i++)
         {
-            GameObject enemyObj = enemySpawner.SpawnEnemy();
+            GameObject enemyObj = enemySpawner.SpawnEnemy(false);
             Enemy enemyScript = enemyObj.GetComponent<Enemy>();
             if (enemyScript != null)
             {
@@ -193,13 +193,14 @@ public class BattleManager : MonoBehaviour
     {
         inputBlocker.SetActive(false);
         for (int i = 0; i < cardDrawPerTurn; i++) cardHolder.DrawCard();
-        currentState = BattleState.PlayerTurn;
+
         AddEnergy(1);
         IncreaseTurn();
         UpdatePlayerHP();
 
         Debug.Log($"Player's Turn {currentTurn}");
         if (turnBanner) turnBanner.ShowBanner("PLAYER TURN!", Color.cyan);
+        currentState = BattleState.PlayerTurn;
     }
 
     public void EndPlayerTurn()
