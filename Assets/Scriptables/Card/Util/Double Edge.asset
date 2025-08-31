@@ -21,5 +21,5 @@ MonoBehaviour:
   effects:
   - {fileID: 11400000, guid: f85434fddb964a64293af0a4a5076399, type: 2}
   - {fileID: 11400000, guid: 855976364aee7544a9f2046a8fa9792f, type: 2}
-  vfxPrefab: {fileID: 2683737577759083391, guid: e0f2a00af2c910e4f80a2005d9585c57, type: 3}
+  vfxPrefab: {fileID: 4257335352507171315, guid: c15118c24c46d71448b797c0adee09e8, type: 3}
   repeatCount: 1

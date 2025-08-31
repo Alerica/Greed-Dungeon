@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1c97fcb3a58bc044b27f86ce41972e0, type: 3}
   m_Name: Purify
   m_EditorClassIdentifier: 
-  cardName: 
-  description: 
-  artwork: {fileID: 0}
-  energyCost: 0
-  cardType: 0
+  cardName: Purify
+  description: thy god shal purify all of thy debuffs
+  artwork: {fileID: -2840236206309624215, guid: f2f84b48fd2601d4c926f990a29f99ea, type: 3}
+  energyCost: 3
+  cardType: 1
   baseValue: 0
   effects: []
-  vfxPrefab: {fileID: 2683737577759083391, guid: e0f2a00af2c910e4f80a2005d9585c57, type: 3}
+  vfxPrefab: {fileID: 4257335352507171315, guid: 8207f80291a9c8b4ca332eb054023ded, type: 3}
   repeatCount: 1
