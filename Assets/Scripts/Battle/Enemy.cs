@@ -160,8 +160,13 @@ public class Enemy : MonoBehaviour
     public void Die()
     {
         Debug.Log($"{enemyName} has been defeated!");
+        if(isBoss)
+        {
+            BattleManager.Instance.bossDefeated++;
+        }
         BattleManager.Instance.RemoveEnemy(this);
         BattleManager.Instance.EndPlayerTurn();
+        
 
         Destroy(gameObject);
     }

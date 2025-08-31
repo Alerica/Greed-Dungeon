@@ -19,7 +19,7 @@ public class BattleManager : MonoBehaviour
     public int enemiesToSpawn = 1;
     public List<GameObject> enemies = new List<GameObject>();
     private int enemiesDefeated = 0;
-    private int bossDefeated = 0;
+    public int bossDefeated = 0;
 
     [Header("Player")]
     public GameObject player;
@@ -178,7 +178,15 @@ public class BattleManager : MonoBehaviour
         maxEnergy += 1;
         for (int i = 0; i < enemiesToSpawn; i++)
         {
-            GameObject enemyObj = enemySpawner.SpawnEnemy(false);
+            GameObject enemyObj;
+            if (currentStage % 5 == 0)
+            {
+                enemyObj = enemySpawner.SpawnEnemy(true);
+            }
+            else
+            {
+                enemyObj = enemySpawner.SpawnEnemy(false);
+            }
             Enemy enemyScript = enemyObj.GetComponent<Enemy>();
             if (enemyScript != null)
             {
