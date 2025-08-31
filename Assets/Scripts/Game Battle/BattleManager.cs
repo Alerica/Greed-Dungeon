@@ -27,7 +27,7 @@ public class BattleManager : MonoBehaviour
 
     [Header("Battle Settings")]
     public int initialCardsInHand = 5;
-    public int cardDrawPerTurn = 1;
+    public int cardDrawPerTurn = 2;
     private int currentEnergy = 5;
     private int maxEnergy = 15;
 
@@ -260,8 +260,8 @@ public class BattleManager : MonoBehaviour
             if (enemyScript.isStunned)
             {
                 Debug.Log($"{enemy.name} is stunned and skips its attack!");
-                if (turnBanner) yield return turnBanner.ShowBannerCoroutine($"{enemyScript.name} is Stunned!", Color.yellow);
-                continue; // Skip attack if stunned
+                if (turnBanner) yield return turnBanner.ShowBannerCoroutine($"Stunned!", Color.yellow);
+                continue; 
             }
             else
             {
