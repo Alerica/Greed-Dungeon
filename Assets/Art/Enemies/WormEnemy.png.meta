@@ -1,31 +1,43 @@
 fileFormatVersion: 2
-guid: f82a6cababdba844b85777a7ad24aade
+guid: 8d8c6133283639a44959476ff9f63b75
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8743056364989623283
-    second: Slime Normal-Sheet_0
+      213: -2331551622383903216
+    second: WormEnemy_0
   - first:
-      213: -5375284093024585832
-    second: Slime Normal-Sheet_1
+      213: -7209333419673013028
+    second: WormEnemy_1
   - first:
-      213: 6564822831343879755
-    second: Slime Normal-Sheet_2
+      213: 3169406960652125174
+    second: WormEnemy_2
   - first:
-      213: -331604781958912503
-    second: Slime Normal-Sheet_3
+      213: 5626362915974821888
+    second: WormEnemy_3
   - first:
-      213: -1777796760695591333
-    second: Slime Normal-Sheet_4
+      213: -8142231651813175740
+    second: WormEnemy_4
   - first:
-      213: 2183840938817480721
-    second: Slime Normal-Sheet_5
+      213: -6406408468131983746
+    second: WormEnemy_5
   - first:
-      213: -4286052908516358049
-    second: Slime Normal-Sheet_6
+      213: -7032616817699031970
+    second: WormEnemy_6
   - first:
-      213: 261191701825067782
-    second: Slime Normal-Sheet_7
+      213: 6437209853243316374
+    second: WormEnemy_7
+  - first:
+      213: 363868157144998024
+    second: WormEnemy_8
+  - first:
+      213: 2986735636137806545
+    second: WormEnemy_9
+  - first:
+      213: 3239334236897927491
+    second: WormEnemy_10
+  - first:
+      213: 3414658677223105831
+    second: WormEnemy_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -134,13 +146,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Slime Normal-Sheet_0
+      name: WormEnemy_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 96
+        x: 201
+        y: 71
+        width: 143
+        height: 106
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d0453990f8c6aa680800000000000000
-      internalID: -8743056364989623283
+      spriteID: 01e525c072aa4afd0800000000000000
+      internalID: -2331551622383903216
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime Normal-Sheet_1
+      name: WormEnemy_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 96
+        x: 777
+        y: 71
+        width: 143
+        height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +183,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 897367cc8972765b0800000000000000
-      internalID: -5375284093024585832
+      spriteID: cd4b905937d43fb90800000000000000
+      internalID: -7209333419673013028
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime Normal-Sheet_2
+      name: WormEnemy_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 96
+        x: 1353
+        y: 71
+        width: 143
+        height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +205,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b4640ab459fea1b50800000000000000
-      internalID: 6564822831343879755
+      spriteID: 6f30256a6defbfb20800000000000000
+      internalID: 3169406960652125174
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime Normal-Sheet_3
+      name: WormEnemy_3
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
-        width: 64
-        height: 96
+        x: 1929
+        y: 71
+        width: 143
+        height: 106
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +227,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 906a48d2537e56bf0800000000000000
-      internalID: -331604781958912503
+      spriteID: 0083c18234bd41e40800000000000000
+      internalID: 5626362915974821888
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime Normal-Sheet_4
+      name: WormEnemy_4
       rect:
         serializedVersion: 2
-        x: 256
-        y: 0
-        width: 64
-        height: 96
+        x: 2505
+        y: 71
+        width: 143
+        height: 106
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +249,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b5e26ebe34ff357e0800000000000000
-      internalID: -1777796760695591333
+      spriteID: 44ecbbab37bf00f80800000000000000
+      internalID: -8142231651813175740
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime Normal-Sheet_5
+      name: WormEnemy_5
       rect:
         serializedVersion: 2
-        x: 320
-        y: 0
-        width: 64
-        height: 96
+        x: 3081
+        y: 71
+        width: 143
+        height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 118eb2c63cf8e4e10800000000000000
-      internalID: 2183840938817480721
+      spriteID: e7e40fad07dd717a0800000000000000
+      internalID: -6406408468131983746
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime Normal-Sheet_6
+      name: WormEnemy_6
       rect:
         serializedVersion: 2
-        x: 384
-        y: 0
-        width: 64
-        height: 96
+        x: 3657
+        y: 71
+        width: 143
+        height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,20 +293,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f584a539691e484c0800000000000000
-      internalID: -4286052908516358049
+      spriteID: e547c93c340276e90800000000000000
+      internalID: -7032616817699031970
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime Normal-Sheet_7
+      name: WormEnemy_7
       rect:
         serializedVersion: 2
-        x: 448
-        y: 0
-        width: 64
-        height: 96
+        x: 4233
+        y: 71
+        width: 143
+        height: 106
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,8 +315,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 60b109d0870ff9300800000000000000
-      internalID: 261191701825067782
+      spriteID: 69856377140955950800000000000000
+      internalID: 6437209853243316374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormEnemy_8
+      rect:
+        serializedVersion: 2
+        x: 4809
+        y: 71
+        width: 143
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88024bb3928bc0500800000000000000
+      internalID: 363868157144998024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormEnemy_9
+      rect:
+        serializedVersion: 2
+        x: 5385
+        y: 71
+        width: 143
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1da8ef59c34037920800000000000000
+      internalID: 2986735636137806545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormEnemy_10
+      rect:
+        serializedVersion: 2
+        x: 5961
+        y: 71
+        width: 143
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 341ef03635d64fc20800000000000000
+      internalID: 3239334236897927491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WormEnemy_11
+      rect:
+        serializedVersion: 2
+        x: 6537
+        y: 71
+        width: 143
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 725a61da9fd436f20800000000000000
+      internalID: 3414658677223105831
       vertices: []
       indices: 
       edges: []
@@ -313,7 +413,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 0bef32135e852534e8315fe6c96b0056
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -321,18 +421,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":96.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Slime Normal-Sheet_0: -8743056364989623283
-      Slime Normal-Sheet_1: -5375284093024585832
-      Slime Normal-Sheet_2: 6564822831343879755
-      Slime Normal-Sheet_3: -331604781958912503
-      Slime Normal-Sheet_4: -1777796760695591333
-      Slime Normal-Sheet_5: 2183840938817480721
-      Slime Normal-Sheet_6: -4286052908516358049
-      Slime Normal-Sheet_7: 261191701825067782
+      WormEnemy_0: -2331551622383903216
+      WormEnemy_1: -7209333419673013028
+      WormEnemy_10: 3239334236897927491
+      WormEnemy_11: 3414658677223105831
+      WormEnemy_2: 3169406960652125174
+      WormEnemy_3: 5626362915974821888
+      WormEnemy_4: -8142231651813175740
+      WormEnemy_5: -6406408468131983746
+      WormEnemy_6: -7032616817699031970
+      WormEnemy_7: 6437209853243316374
+      WormEnemy_8: 363868157144998024
+      WormEnemy_9: 2986735636137806545
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

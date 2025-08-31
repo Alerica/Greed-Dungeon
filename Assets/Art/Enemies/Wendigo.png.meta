@@ -1,31 +1,28 @@
 fileFormatVersion: 2
-guid: f82a6cababdba844b85777a7ad24aade
+guid: 1e700d7a4d58b8b41bdfa8f8089cf08b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8743056364989623283
-    second: Slime Normal-Sheet_0
+      213: -4864586392625904324
+    second: Wendigo_0
   - first:
-      213: -5375284093024585832
-    second: Slime Normal-Sheet_1
+      213: -4655982190135645266
+    second: Wendigo_1
   - first:
-      213: 6564822831343879755
-    second: Slime Normal-Sheet_2
+      213: -7493576026140581246
+    second: Wendigo_2
   - first:
-      213: -331604781958912503
-    second: Slime Normal-Sheet_3
+      213: -6736668479887239324
+    second: Wendigo_3
   - first:
-      213: -1777796760695591333
-    second: Slime Normal-Sheet_4
+      213: 2820536365689417761
+    second: Wendigo_4
   - first:
-      213: 2183840938817480721
-    second: Slime Normal-Sheet_5
+      213: -2406445031639049298
+    second: Wendigo_5
   - first:
-      213: -4286052908516358049
-    second: Slime Normal-Sheet_6
-  - first:
-      213: 261191701825067782
-    second: Slime Normal-Sheet_7
+      213: 550174728023043384
+    second: Wendigo_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -134,13 +131,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Slime Normal-Sheet_0
+      name: Wendigo_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 96
+        x: 171
+        y: 33
+        width: 221
+        height: 291
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,20 +146,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d0453990f8c6aa680800000000000000
-      internalID: -8743056364989623283
+      spriteID: c35855813748d7cb0800000000000000
+      internalID: -4864586392625904324
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime Normal-Sheet_1
+      name: Wendigo_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 96
+        x: 743
+        y: 33
+        width: 225
+        height: 290
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 897367cc8972765b0800000000000000
-      internalID: -5375284093024585832
+      spriteID: eab6b64ddd0a26fb0800000000000000
+      internalID: -4655982190135645266
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime Normal-Sheet_2
+      name: Wendigo_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 96
+        x: 1319
+        y: 33
+        width: 225
+        height: 290
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +190,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b4640ab459fea1b50800000000000000
-      internalID: 6564822831343879755
+      spriteID: 282e1809e48710890800000000000000
+      internalID: -7493576026140581246
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime Normal-Sheet_3
+      name: Wendigo_3
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
-        width: 64
-        height: 96
+        x: 1895
+        y: 33
+        width: 225
+        height: 290
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +212,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 906a48d2537e56bf0800000000000000
-      internalID: -331604781958912503
+      spriteID: 46710ceb5bb8282a0800000000000000
+      internalID: -6736668479887239324
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime Normal-Sheet_4
+      name: Wendigo_4
       rect:
         serializedVersion: 2
-        x: 256
-        y: 0
-        width: 64
-        height: 96
+        x: 2475
+        y: 33
+        width: 221
+        height: 291
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +234,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b5e26ebe34ff357e0800000000000000
-      internalID: -1777796760695591333
+      spriteID: 1203df871ee842720800000000000000
+      internalID: 2820536365689417761
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime Normal-Sheet_5
+      name: Wendigo_5
       rect:
         serializedVersion: 2
-        x: 320
-        y: 0
-        width: 64
-        height: 96
+        x: 3051
+        y: 33
+        width: 221
+        height: 291
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,20 +256,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 118eb2c63cf8e4e10800000000000000
-      internalID: 2183840938817480721
+      spriteID: eab96ad5ef69a9ed0800000000000000
+      internalID: -2406445031639049298
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime Normal-Sheet_6
+      name: Wendigo_6
       rect:
         serializedVersion: 2
-        x: 384
-        y: 0
-        width: 64
-        height: 96
+        x: 3627
+        y: 33
+        width: 221
+        height: 291
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,30 +278,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f584a539691e484c0800000000000000
-      internalID: -4286052908516358049
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slime Normal-Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 0
-        width: 64
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 60b109d0870ff9300800000000000000
-      internalID: 261191701825067782
+      spriteID: 83de53c000d92a700800000000000000
+      internalID: 550174728023043384
       vertices: []
       indices: 
       edges: []
@@ -313,7 +288,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 0bef32135e852534e8315fe6c96b0056
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -321,18 +296,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":96.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Slime Normal-Sheet_0: -8743056364989623283
-      Slime Normal-Sheet_1: -5375284093024585832
-      Slime Normal-Sheet_2: 6564822831343879755
-      Slime Normal-Sheet_3: -331604781958912503
-      Slime Normal-Sheet_4: -1777796760695591333
-      Slime Normal-Sheet_5: 2183840938817480721
-      Slime Normal-Sheet_6: -4286052908516358049
-      Slime Normal-Sheet_7: 261191701825067782
+      Wendigo_0: -4864586392625904324
+      Wendigo_1: -4655982190135645266
+      Wendigo_2: -7493576026140581246
+      Wendigo_3: -6736668479887239324
+      Wendigo_4: 2820536365689417761
+      Wendigo_5: -2406445031639049298
+      Wendigo_6: 550174728023043384
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

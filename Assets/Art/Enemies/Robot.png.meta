@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: f82a6cababdba844b85777a7ad24aade
+guid: c6408f8aa27382743ae68dafcd1d92f2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8743056364989623283
-    second: Slime Normal-Sheet_0
+      213: 17426746270384133
+    second: Robot_0
   - first:
-      213: -5375284093024585832
-    second: Slime Normal-Sheet_1
+      213: 5638259562752074330
+    second: Robot_1
   - first:
-      213: 6564822831343879755
-    second: Slime Normal-Sheet_2
+      213: -3378959473338303302
+    second: Robot_2
   - first:
-      213: -331604781958912503
-    second: Slime Normal-Sheet_3
+      213: 5332947737335612695
+    second: Robot_3
   - first:
-      213: -1777796760695591333
-    second: Slime Normal-Sheet_4
+      213: 214248980452440492
+    second: Robot_4
   - first:
-      213: 2183840938817480721
-    second: Slime Normal-Sheet_5
+      213: -3727906849806164347
+    second: Robot_5
   - first:
-      213: -4286052908516358049
-    second: Slime Normal-Sheet_6
+      213: -5713122161831522535
+    second: Robot_6
   - first:
-      213: 261191701825067782
-    second: Slime Normal-Sheet_7
+      213: -321252410884412435
+    second: Robot_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -134,13 +134,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Slime Normal-Sheet_0
+      name: Robot_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 8
         y: 0
-        width: 64
-        height: 96
+        width: 240
+        height: 264
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,20 +149,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d0453990f8c6aa680800000000000000
-      internalID: -8743056364989623283
+      spriteID: 500890d8889ed3000800000000000000
+      internalID: 17426746270384133
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime Normal-Sheet_1
+      name: Robot_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 264
         y: 0
-        width: 64
-        height: 96
+        width: 240
+        height: 264
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 897367cc8972765b0800000000000000
-      internalID: -5375284093024585832
+      spriteID: a526945133f1f3e40800000000000000
+      internalID: 5638259562752074330
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime Normal-Sheet_2
+      name: Robot_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 520
         y: 0
-        width: 64
-        height: 96
+        width: 240
+        height: 264
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b4640ab459fea1b50800000000000000
-      internalID: 6564822831343879755
+      spriteID: abcba31f2468b11d0800000000000000
+      internalID: -3378959473338303302
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime Normal-Sheet_3
+      name: Robot_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 776
         y: 0
-        width: 64
-        height: 96
+        width: 240
+        height: 264
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 906a48d2537e56bf0800000000000000
-      internalID: -331604781958912503
+      spriteID: 715cc9146bf620a40800000000000000
+      internalID: 5332947737335612695
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime Normal-Sheet_4
+      name: Robot_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 1032
         y: 0
-        width: 64
-        height: 96
+        width: 240
+        height: 264
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +237,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b5e26ebe34ff357e0800000000000000
-      internalID: -1777796760695591333
+      spriteID: ca97b55005a29f200800000000000000
+      internalID: 214248980452440492
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime Normal-Sheet_5
+      name: Robot_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 1288
         y: 0
-        width: 64
-        height: 96
+        width: 240
+        height: 264
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,20 +259,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 118eb2c63cf8e4e10800000000000000
-      internalID: 2183840938817480721
+      spriteID: 58ede8da870d34cc0800000000000000
+      internalID: -3727906849806164347
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime Normal-Sheet_6
+      name: Robot_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 1544
         y: 0
-        width: 64
-        height: 96
+        width: 240
+        height: 264
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,20 +281,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f584a539691e484c0800000000000000
-      internalID: -4286052908516358049
+      spriteID: 91fce99c9a9e6b0b0800000000000000
+      internalID: -5713122161831522535
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime Normal-Sheet_7
+      name: Robot_7
       rect:
         serializedVersion: 2
-        x: 448
+        x: 1800
         y: 0
-        width: 64
-        height: 96
+        width: 240
+        height: 264
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,8 +303,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 60b109d0870ff9300800000000000000
-      internalID: 261191701825067782
+      spriteID: deb2ff562aeaa8bf0800000000000000
+      internalID: -321252410884412435
       vertices: []
       indices: 
       edges: []
@@ -313,7 +313,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 0bef32135e852534e8315fe6c96b0056
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -321,18 +321,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":96.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Slime Normal-Sheet_0: -8743056364989623283
-      Slime Normal-Sheet_1: -5375284093024585832
-      Slime Normal-Sheet_2: 6564822831343879755
-      Slime Normal-Sheet_3: -331604781958912503
-      Slime Normal-Sheet_4: -1777796760695591333
-      Slime Normal-Sheet_5: 2183840938817480721
-      Slime Normal-Sheet_6: -4286052908516358049
-      Slime Normal-Sheet_7: 261191701825067782
+      Robot_0: 17426746270384133
+      Robot_1: 5638259562752074330
+      Robot_2: -3378959473338303302
+      Robot_3: 5332947737335612695
+      Robot_4: 214248980452440492
+      Robot_5: -3727906849806164347
+      Robot_6: -5713122161831522535
+      Robot_7: -321252410884412435
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

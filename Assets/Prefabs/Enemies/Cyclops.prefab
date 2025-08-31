@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3405739535928495270
+--- !u!1 &9159664574234449971
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,52 +8,52 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1741771035058624826}
-  - component: {fileID: 232905302196039262}
-  - component: {fileID: 1439789126246683096}
-  - component: {fileID: 2672198350168036639}
-  - component: {fileID: 2113235956109525764}
-  m_Layer: 5
-  m_Name: Slime Fire
+  - component: {fileID: 754352735066109885}
+  - component: {fileID: 5379963581303593465}
+  - component: {fileID: 5557266373591330323}
+  - component: {fileID: 4163739244759623769}
+  - component: {fileID: 7740507243674757083}
+  m_Layer: 6
+  m_Name: Cyclops
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1741771035058624826
+--- !u!224 &754352735066109885
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3405739535928495270}
+  m_GameObject: {fileID: 9159664574234449971}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -3568}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 256, y: 400}
+  m_SizeDelta: {x: 840, y: 730}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &232905302196039262
+--- !u!222 &5379963581303593465
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3405739535928495270}
+  m_GameObject: {fileID: 9159664574234449971}
   m_CullTransparentMesh: 1
---- !u!114 &1439789126246683096
+--- !u!114 &5557266373591330323
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3405739535928495270}
+  m_GameObject: {fileID: 9159664574234449971}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6662544444492589840, guid: c509aab66b4a52143a1bedf26be99321, type: 3}
+  m_Sprite: {fileID: 4809396141046213086, guid: 65ff616f63aa1424fb63da4f86fd169c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -77,40 +77,37 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2672198350168036639
+--- !u!114 &4163739244759623769
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3405739535928495270}
+  m_GameObject: {fileID: 9159664574234449971}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab7c402bdb72068418bfc01c8f53508c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyName: Slime
-  maxHealth: 14
-  health: 14
-  defense: 5
-  attackPower: 14
+  enemyName: Cyclops
+  maxHealth: 40
+  health: 40
+  defense: 10
+  attackPower: 10
   enemyDamageModifier: 1
   statusEffects: []
-  isDamageReductionApplied: 0
-  isBoss: 0
-  isStunned: 0
   turnBanner: {fileID: 0}
---- !u!95 &2113235956109525764
+--- !u!95 &7740507243674757083
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3405739535928495270}
+  m_GameObject: {fileID: 9159664574234449971}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f6c47a331d349f24e84d554703d68e0d, type: 2}
+  m_Controller: {fileID: 9100000, guid: aa8beb4da41fda242a6fbfe055548b24, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

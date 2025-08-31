@@ -90,15 +90,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyName: Watcher
-  maxHealth: 10
-  health: 10
+  maxHealth: 30
+  health: 30
   defense: 20
   attackPower: 6
   enemyDamageModifier: 1
   statusEffects: []
-  isDamageReductionApplied: 0
-  isBoss: 0
-  isStunned: 0
   turnBanner: {fileID: 0}
 --- !u!95 &8401137714466144814
 Animator:
