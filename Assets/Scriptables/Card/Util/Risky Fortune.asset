@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Risky Fortune
   m_EditorClassIdentifier: 
   cardName: Risky Fortune
-  description: Draw 3 cards, discard 2 cards at random.
+  description: Draw 3 cards
   artwork: {fileID: 3114958668501543090, guid: be59884ecf4d1a040af4f156a2043207, type: 3}
   energyCost: 1
   cardType: 2
   baseValue: 0
   effects:
   - {fileID: 11400000, guid: a72b538a922eaa64db6a66addea47a73, type: 2}
-  vfxPrefab: {fileID: 0}
+  vfxPrefab: {fileID: 2683737577759083391, guid: e0f2a00af2c910e4f80a2005d9585c57, type: 3}
+  repeatCount: 1
