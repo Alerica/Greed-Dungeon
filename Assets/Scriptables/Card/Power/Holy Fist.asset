@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Holy Fist
   m_EditorClassIdentifier: 
   cardName: Holy Fist
-  description: 
+  description: God bless thy fist with holy power dealing 5 damage
   artwork: {fileID: -60431695663484112, guid: 217879be529cbe3428a9192ad08875d5, type: 3}
-  energyCost: 0
+  energyCost: 1
   cardType: 0
   baseValue: 0
-  effects: []
-  vfxPrefab: {fileID: 0}
+  effects:
+  - {fileID: 11400000, guid: 962a8e0cf8b25cd449fe7c0530eaf1d6, type: 2}
+  - {fileID: 11400000, guid: 6162b1fd0d9f2be4db75d52de9898f5f, type: 2}
+  vfxPrefab: {fileID: 6109086696990128411, guid: 8fec721b343f0ed4fb1773c73701a624, type: 3}

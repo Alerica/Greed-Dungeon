@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Combustion
   m_EditorClassIdentifier: 
   cardName: Combustion
-  description: 
+  description: Spontainiously combusting an enemy dealing 5 damage
   artwork: {fileID: 9023812474397819966, guid: ac94fb242e39995449f6b9a1ce06fe89, type: 3}
-  energyCost: 0
+  energyCost: 1
   cardType: 0
   baseValue: 0
-  effects: []
-  vfxPrefab: {fileID: 0}
+  effects:
+  - {fileID: 11400000, guid: 962a8e0cf8b25cd449fe7c0530eaf1d6, type: 2}
+  vfxPrefab: {fileID: 5925710103267668280, guid: f6cd1baa5e3728743a2156ab1b1b8d59, type: 3}

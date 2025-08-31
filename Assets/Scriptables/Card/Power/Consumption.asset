@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: Consumption
   m_EditorClassIdentifier: 
   cardName: Consumption
-  description: 
+  description: Summons a dark shadow to eat away at your enemy dealing 3 damage for
+    the next 3 turns
   artwork: {fileID: -2491326224107399921, guid: 9ec28f2c3c80044428bb68a8b9b876aa, type: 3}
-  energyCost: 0
+  energyCost: 2
   cardType: 0
   baseValue: 0
-  effects: []
-  vfxPrefab: {fileID: 0}
+  effects:
+  - {fileID: 11400000, guid: 7be6bff5aea39b54cb1498ef96a2069b, type: 2}
+  - {fileID: 11400000, guid: 2ca4f6e982bdd1c4889a7297898c8ba2, type: 2}
+  vfxPrefab: {fileID: 6270346385570858013, guid: d1d89d1c27e14904985a0c809a53ef77, type: 3}

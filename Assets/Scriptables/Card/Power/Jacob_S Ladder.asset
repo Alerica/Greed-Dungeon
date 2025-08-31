@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Jacob_S Ladder
   m_EditorClassIdentifier: 
   cardName: Jacob`s Ladder
-  description: 
+  description: Summons a chain lighning from the earth to the heavens dealing 12
+    damage to enemies
   artwork: {fileID: -6897655546226330556, guid: 1eb0f806d7f00f64aa8ccd20e4caeaf0, type: 3}
-  energyCost: 0
+  energyCost: 4
   cardType: 0
   baseValue: 0
-  effects: []
-  vfxPrefab: {fileID: 0}
+  effects:
+  - {fileID: 11400000, guid: 01c59639a6b30184aa146e3e5e7cc93b, type: 2}
+  vfxPrefab: {fileID: 8698555042322716174, guid: 11193e8a5169a694bb55afb8e60abaca, type: 3}

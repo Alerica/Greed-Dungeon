@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Lightning Bolt
   m_EditorClassIdentifier: 
   cardName: Lightning Bolt
-  description: Flame
+  description: Shoots a quick lightning that chains through all your enemies  dealing
+    6 amount of damage stunning enemies for 1 turn
   artwork: {fileID: 6957411156429290311, guid: 4de15bdfa552d26458fa9113408cf09c, type: 3}
-  energyCost: 1
+  energyCost: 3
   cardType: 0
   baseValue: 0
   effects:
-  - {fileID: 11400000, guid: 01c59639a6b30184aa146e3e5e7cc93b, type: 2}
-  vfxPrefab: {fileID: 7424460830243675146, guid: 6b7ba61ddc93b5c4192e981467e3d244, type: 3}
+  - {fileID: 11400000, guid: ac579e91755962a41bcf01ab5d0f3d52, type: 2}
+  - {fileID: 11400000, guid: 06b55c68fc122af48a4586b31f5dea1b, type: 2}
+  vfxPrefab: {fileID: 0}

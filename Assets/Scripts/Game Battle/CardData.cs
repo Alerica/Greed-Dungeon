@@ -14,6 +14,7 @@ public class CardData : ScriptableObject
 
     [Header("Visuals")]
     public GameObject vfxPrefab; // assign the prefab in inspector
+    public int repeatCount = 1; // number of times to repeat the VFX
 }
 
 public enum CardType

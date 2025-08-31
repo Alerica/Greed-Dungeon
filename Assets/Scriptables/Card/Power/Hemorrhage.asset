@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: Hemorrhage
   m_EditorClassIdentifier: 
   cardName: Hemorrhage
-  description: 
+  description: Control your enemy's blood gushing it out of every possible holes
+    dealing 20 damage to an enemy and applying Bleed for 2 turns to an Enemy
   artwork: {fileID: -8933486132051483807, guid: 3484799c7432bec4bafa9da2ec5971d1, type: 3}
-  energyCost: 0
+  energyCost: 4
   cardType: 0
   baseValue: 0
-  effects: []
-  vfxPrefab: {fileID: 0}
+  effects:
+  - {fileID: 11400000, guid: b74c8ba7d51bbcb43b39c25958efbff9, type: 2}
+  - {fileID: 11400000, guid: 6a41bb01546789d49b0d37d29afed78d, type: 2}
+  vfxPrefab: {fileID: 6270346385570858013, guid: 41bb913faddbd864c8bc43b55f8f004d, type: 3}

@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Photon Cannon
   m_EditorClassIdentifier: 
   cardName: Photon Cannon
-  description: 
+  description: Move a light particle at lightspeed towards your enemy dealing 4 true
+    damage
   artwork: {fileID: -1228873760189606814, guid: 667915e929404444e9dcf0d240067fe8, type: 3}
-  energyCost: 0
+  energyCost: 1
   cardType: 0
   baseValue: 0
   effects: []

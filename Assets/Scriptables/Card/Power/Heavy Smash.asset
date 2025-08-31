@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Heavy Smash
   m_EditorClassIdentifier: 
   cardName: Heavy Smash
-  description: '"Smash enemy with a mace, Dealing 7 Damage and stunning it for 1
-    turn  "'
+  description: Smash enemy with a mace, Dealing 7 Damage and stunning it for 1 turn
   artwork: {fileID: 1284902391189925333, guid: 96887e97447af7c4fb60a79ef1cfd620, type: 3}
   energyCost: 2
   cardType: 0
   baseValue: 0
-  effects: []
-  vfxPrefab: {fileID: 0}
+  effects:
+  - {fileID: 11400000, guid: 06b55c68fc122af48a4586b31f5dea1b, type: 2}
+  - {fileID: 11400000, guid: c693c17b3e6ceec40bba4b9759682bdd, type: 2}
+  vfxPrefab: {fileID: 1090652646650202896, guid: 2dd69e8f662b1f84986bf14f6e34227d, type: 3}

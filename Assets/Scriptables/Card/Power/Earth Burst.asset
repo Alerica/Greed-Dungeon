@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Earth Burst
   m_EditorClassIdentifier: 
   cardName: Earth Burst
-  description: 
+  description: Shoot a sharp mana filled stones to penetrate the defense of your
+    enemy dealing 15 damage and 25% defense reduction to enemy
   artwork: {fileID: -8403129116123421336, guid: b761596197df4cb448d6654aa608694f, type: 3}
-  energyCost: 0
+  energyCost: 2
   cardType: 0
   baseValue: 0
-  effects: []
+  effects:
+  - {fileID: 11400000, guid: 6162b1fd0d9f2be4db75d52de9898f5f, type: 2}
   vfxPrefab: {fileID: 0}

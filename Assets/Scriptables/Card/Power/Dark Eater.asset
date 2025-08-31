@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: Dark Eater
   m_EditorClassIdentifier: 
   cardName: Dark Eater
-  description: 
+  description: Summons a dark entities to join and form a blast dealing 20 damage
+    and reduces 50% defense
   artwork: {fileID: -3373941701189436385, guid: 0366590dc88dd654fab469d5ff54e275, type: 3}
-  energyCost: 0
+  energyCost: 5
   cardType: 0
   baseValue: 0
-  effects: []
-  vfxPrefab: {fileID: 0}
+  effects:
+  - {fileID: 11400000, guid: 6162b1fd0d9f2be4db75d52de9898f5f, type: 2}
+  - {fileID: 11400000, guid: 0e3c82e68ba690f45a5666092e416465, type: 2}
+  vfxPrefab: {fileID: 8164395169209715533, guid: 272000a2de48c5e4f98a0331fcd09fee, type: 3}
