@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Sun Fury
   m_EditorClassIdentifier: 
   cardName: Sun Fury
-  description: 
+  description: Call a big meteor towards an enemy dealing 18 amount of damage and
+    applies burning
   artwork: {fileID: -4084487760487837083, guid: f2978fb046ad46240b7f022840aceaf9, type: 3}
   energyCost: 0
   cardType: 0

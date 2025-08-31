@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1c97fcb3a58bc044b27f86ce41972e0, type: 3}
   m_Name: Bomb
   m_EditorClassIdentifier: 
-  cardName: 
+  cardName: Bomb
   description: 
-  artwork: {fileID: 0}
+  artwork: {fileID: -1483665779731714255, guid: aefe0515787dd5e43ae64bab08bbca99, type: 3}
   energyCost: 0
   cardType: 0
   baseValue: 0

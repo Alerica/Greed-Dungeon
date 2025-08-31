@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1c97fcb3a58bc044b27f86ce41972e0, type: 3}
   m_Name: Madness
   m_EditorClassIdentifier: 
-  cardName: 
+  cardName: Madness
   description: 
-  artwork: {fileID: 0}
+  artwork: {fileID: 5942626897892454440, guid: d6cafd2df30b024409ade6bc2cfb4236, type: 3}
   energyCost: 0
   cardType: 0
   baseValue: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Water Cannon
   m_EditorClassIdentifier: 
   cardName: Water Cannon
-  description: 
+  description: Shoots a spray of water towarnds an enemy dealing 3 Damage 3 times
   artwork: {fileID: -3157240915573338057, guid: 9b6c0c91099930c449d023c4b02236d8, type: 3}
   energyCost: 0
   cardType: 0

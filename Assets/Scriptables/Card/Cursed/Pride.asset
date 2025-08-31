@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1c97fcb3a58bc044b27f86ce41972e0, type: 3}
   m_Name: Pride
   m_EditorClassIdentifier: 
-  cardName: 
+  cardName: Pride
   description: 
-  artwork: {fileID: 0}
+  artwork: {fileID: -6684376841819339026, guid: 4a975cf190b22254e8b78a0c497aa702, type: 3}
   energyCost: 0
   cardType: 0
   baseValue: 0

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Quake
   m_EditorClassIdentifier: 
   cardName: Quake
-  description: 
+  description: Stomp the ground and create a huge earthquake dealing  7 damage 3
+    times to your enemies
   artwork: {fileID: -2932612526820762341, guid: cc07e4c2630095e4781acd68474e11be, type: 3}
   energyCost: 0
   cardType: 0

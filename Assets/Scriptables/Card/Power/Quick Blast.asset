@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Quick Blast
   m_EditorClassIdentifier: 
   cardName: Quick Blast
-  description: 
+  description: Shoots a quick lightning that chains through all your enemies  dealing
+    6 amount of damage stunning enemies for 1 turn
   artwork: {fileID: 5991739518503250151, guid: c0298890b8eadfb439a0a4d20c18c027, type: 3}
   energyCost: 0
   cardType: 0
