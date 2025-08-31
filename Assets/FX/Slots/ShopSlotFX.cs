@@ -3,72 +3,89 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class ShopSlotFX : MonoBehaviour
 {
-    [SerializeField] private CardData[] possibleCardsGold; // array of possible cards to win
-    [SerializeField] private CardData[] possibleCardsSilver; // array of possible cards to win
-    [SerializeField] private CardData[] possibleCardsBronze; // array of possible cards to win
-    [SerializeField][Range(0f, 1f)] private float ChanceToWinGold = 0.05f; // slider in Inspector
-    [SerializeField][Range(0f, 1f)] private float ChanceToWinSilver = 0.35f; // slider in Inspector
-    [SerializeField][Range(0f, 1f)] private float ChanceToWinBronze = 0.6f; // slider in Inspector
+    [SerializeField] private CardData[] possibleCardsGold;
+    [SerializeField] private CardData[] possibleCardsSilver;
+    [SerializeField] private CardData[] possibleCardsBronze;
+
+    [SerializeField][Range(0f, 1f)] private float ChanceToWinGold = 0.05f;
+    [SerializeField][Range(0f, 1f)] private float ChanceToWinSilver = 0.35f;
+    [SerializeField][Range(0f, 1f)] private float ChanceToWinBronze = 0.6f;
+
     [SerializeField] private List<GameObject> texts;
     [SerializeField] private Image img;
+    [SerializeField] private TextMeshProUGUI Title;
+    [SerializeField] private TextMeshProUGUI Description;
+    [SerializeField] private CanvasGroup canvasGroup;
+
+    private bool rewardShown = false;
 
     public void ShowRewardInSlot(CardData rewardCard, float fadeDuration = 0.5f)
     {
         if (img == null) return;
 
-        // Set artwork and start transparent
         Debug.Log("Show reward: " + rewardCard.cardName);
-        Debug.Log("Artwork: " + rewardCard.artwork);
-        img.sprite = rewardCard.artwork;
-        img.color = new Color(1, 1, 1, 0);
-        img.gameObject.SetActive(true);
 
-        // Fade in
-        StartCoroutine(PopIn(img, fadeDuration));
+        // Assign visuals
+        img.sprite = rewardCard.artwork;
+        Title.text = rewardCard.cardName;
+        Description.text = rewardCard.description;
+
+        // Reset for animation
+        canvasGroup.alpha = 0f;
+        transform.localScale = Vector3.zero;
+        gameObject.SetActive(true);
+
+        rewardShown = true;
+
+        // Fade in with scale
+        StartCoroutine(PopIn(fadeDuration));
     }
 
-    private IEnumerator PopIn(Image img, float duration = 0.5f)
+    private IEnumerator PopIn(float duration = 0.5f)
     {
         float t = 0f;
-
-        // Start small and transparent
-        img.transform.localScale = Vector3.zero;
-        img.color = new Color(1, 1, 1, 0);
 
         while (t < 1f)
         {
             t += Time.deltaTime / duration;
 
             // Smooth scale up (ease out)
-            float scale = Mathf.SmoothStep(0f, 1.5f, t);
-            img.transform.localScale = new Vector3(scale, scale, scale);
+            float scale = Mathf.SmoothStep(0f, 1f, t);
+            transform.localScale = new Vector3(scale, scale, scale);
 
-            // Fade in
-            img.color = new Color(1, 1, 1, Mathf.Lerp(0f, 1f, t));
+            // Fade alpha
+            canvasGroup.alpha = Mathf.Lerp(0f, 1f, t);
 
             yield return null;
         }
 
-        // Ensure final values
-        img.transform.localScale = Vector3.one;
-        img.color = Color.white;
+        // Final values
+        transform.localScale = Vector3.one;
+        canvasGroup.alpha = 1f;
     }
 
+    private void Update()
+    {
+        // Wait for a click if reward is shown
+        if (rewardShown && Input.GetMouseButtonDown(0))
+        {
+            Destroy(gameObject); // remove slot after click
+        }
+    }
 
     public void GenerateNumber(GameObject slot)
     {
-        // Ensure all text objects are active
         foreach (GameObject go in texts)
             go.SetActive(true);
 
-        float roll = Random.value; // 0-1 random
+        float roll = Random.value;
         CardData rewardCard = null;
 
         if (roll < ChanceToWinGold)
         {
-            // Gold: all 3 numbers same
             int winningNumber = Random.Range(1, 10);
             for (int i = 0; i < 3; i++)
                 texts[i].GetComponent<TextMeshProUGUI>().text = winningNumber.ToString();
@@ -78,7 +95,6 @@ public class ShopSlotFX : MonoBehaviour
         }
         else if (roll < ChanceToWinGold + ChanceToWinSilver)
         {
-            // Silver: 2 numbers same
             int repeatedNumber = Random.Range(1, 10);
             int differentNumber = repeatedNumber;
             while (differentNumber == repeatedNumber)
@@ -93,7 +109,6 @@ public class ShopSlotFX : MonoBehaviour
         }
         else
         {
-            // Bronze: all different numbers
             int num1 = Random.Range(1, 10);
             int num2 = num1;
             int num3 = num1;
@@ -108,15 +123,10 @@ public class ShopSlotFX : MonoBehaviour
                 rewardCard = possibleCardsBronze[Random.Range(0, possibleCardsBronze.Length)];
         }
 
-        // Give reward
         if (rewardCard != null)
         {
-            CardData temp = rewardCard;
-            // Add to deck
             BattleManager.Instance.AddCardToDeck(rewardCard);
-
-            // Show reward in the slot
-            ShowRewardInSlot(temp);
+            ShowRewardInSlot(rewardCard);
         }
     }
 }

@@ -42,12 +42,11 @@ public class CollectionPanel : MonoBehaviour
             {
                 // Instantiate as child of this CollectionPanel
                 activeRoll = Instantiate(rollPrefab, transform);
-                Destroy(activeRoll, 5f); // auto destroy after 5 seconds
             }
         }
         else
         {
-            textPrefab.GetComponent<TextMeshProUGUI>().text = "Sorry, you need 1500 Biscuits to";
+            textPrefab.GetComponent<TextMeshProUGUI>().text = "Sorry honey but you will need 1500 biscuits to try your luck";
         }
         
     }
