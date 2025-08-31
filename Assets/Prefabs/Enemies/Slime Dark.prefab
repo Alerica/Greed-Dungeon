@@ -112,10 +112,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyName: Dark Slime
-  maxHealth: 20
-  health: 20
+  maxHealth: 14
+  health: 14
   defense: 5
   attackPower: 8
   enemyDamageModifier: 1
   statusEffects: []
+  isDamageReductionApplied: 0
+  isBoss: 0
+  isStunned: 0
   turnBanner: {fileID: 0}

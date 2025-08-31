@@ -89,13 +89,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab7c402bdb72068418bfc01c8f53508c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyName: Goblin
+  enemyName: Watcher
   maxHealth: 10
   health: 10
   defense: 20
   attackPower: 6
   enemyDamageModifier: 1
   statusEffects: []
+  isDamageReductionApplied: 0
+  isBoss: 0
+  isStunned: 0
   turnBanner: {fileID: 0}
 --- !u!95 &8401137714466144814
 Animator:

@@ -112,10 +112,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyName: Golden Egg
-  maxHealth: 30
-  health: 30
+  maxHealth: 25
+  health: 25
   defense: 5
   attackPower: 1
   enemyDamageModifier: 1
   statusEffects: []
+  isDamageReductionApplied: 0
+  isBoss: 0
+  isStunned: 0
   turnBanner: {fileID: 0}

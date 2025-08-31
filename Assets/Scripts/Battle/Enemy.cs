@@ -9,10 +9,14 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float health = 100;
     [SerializeField] private float defense = 5;
     [SerializeField] private float attackPower = 10;
-
     [SerializeField] private float enemyDamageModifier = 1;
 
     public List<StatusEffect> statusEffects = new List<StatusEffect>();
+
+    [Header("Actual Stats (Read-Only)")]
+    public bool isDamageReductionApplied = false;
+    public bool isBoss = false;
+    public bool isStunned = false;
 
     [Header("SFX")]
     public TextVisualEffect turnBanner;
@@ -24,6 +28,8 @@ public class Enemy : MonoBehaviour
 
     public IEnumerator TakeDamageCoroutine(float amount, string source = null)
     {
+        if(isDamageReductionApplied)
+            amount *= 0.75f; // Example: 25% damage reduction
         health -= amount * (100 / (100 + defense));
         // Show floating text if banner exists
         if (turnBanner != null)
@@ -106,6 +112,8 @@ public class Enemy : MonoBehaviour
     // Call this at the **start or end of each enemy turn**
     public IEnumerator ProcessTurnEffectsCoroutine()
     {
+        isStunned = false; // reset stun each turn
+        enemyDamageModifier = 1f; // reset modifier each turn
         for (int i = statusEffects.Count - 1; i >= 0; i--)
         {
             var effect = statusEffects[i];
@@ -119,13 +127,20 @@ public class Enemy : MonoBehaviour
                     yield return TakeDamageCoroutine(effect.value, "Bleed");
                     break;
                 case StatusType.Stun:
-                    if (turnBanner != null)
-                        yield return turnBanner.ShowBannerCoroutine("Stunned!", Color.yellow);
+                    isStunned = true;
+                    yield return turnBanner.ShowBannerCoroutine("Stunned!", Color.yellow);
                     break;
                 case StatusType.Frost:
-                    enemyDamageModifier = Mathf.Max(0, enemyDamageModifier - effect.value);
+                    enemyDamageModifier = 5f;
                     break;
-
+                case StatusType.DefenseReduction:
+                    break;
+                case StatusType.Leech:
+                    break;
+                case StatusType.Soak:
+                    break;
+                case StatusType.Gnawed:
+                    break;
                     // Add other effects here
             }
 

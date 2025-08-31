@@ -24,6 +24,5 @@ public enum StatusType
     Stun,
     Soak,
     DefenseReduction,
-
     Gnawed
 }

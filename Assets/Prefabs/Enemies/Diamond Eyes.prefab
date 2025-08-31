@@ -90,12 +90,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyName: Diamond Eyes
-  maxHealth: 15
-  health: 15
+  maxHealth: 12
+  health: 12
   defense: 5
   attackPower: 10
   enemyDamageModifier: 1
   statusEffects: []
+  isDamageReductionApplied: 0
+  isBoss: 0
+  isStunned: 0
   turnBanner: {fileID: 0}
 --- !u!95 &2376598104236204840
 Animator:

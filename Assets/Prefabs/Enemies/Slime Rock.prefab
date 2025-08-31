@@ -93,9 +93,12 @@ MonoBehaviour:
   maxHealth: 20
   health: 20
   defense: 5
-  attackPower: 8
+  attackPower: 4
   enemyDamageModifier: 1
   statusEffects: []
+  isDamageReductionApplied: 0
+  isBoss: 0
+  isStunned: 0
   turnBanner: {fileID: 0}
 --- !u!95 &3510502212314689739
 Animator:
