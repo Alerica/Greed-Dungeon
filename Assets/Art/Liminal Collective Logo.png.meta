@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: b65d1d88d1021bc4f97e117999613e7d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3566916350426351955
+    second: Liminal Collective Logo_0
+  - first:
+      213: -6363398258889169043
+    second: Liminal Collective Logo_1
+  - first:
+      213: 1083579459334890724
+    second: Liminal Collective Logo_2
+  - first:
+      213: 188109536598621528
+    second: Liminal Collective Logo_3
+  - first:
+      213: 3978149073733672718
+    second: Liminal Collective Logo_4
+  - first:
+      213: 7739565506525595816
+    second: Liminal Collective Logo_5
+  - first:
+      213: -5715784258879011545
+    second: Liminal Collective Logo_6
+  - first:
+      213: -6184872642387750850
+    second: Liminal Collective Logo_7
+  - first:
+      213: -49161680326751378
+    second: Liminal Collective Logo_8
+  - first:
+      213: 8815384101755594105
+    second: Liminal Collective Logo_9
+  - first:
+      213: -2259951859269274540
+    second: Liminal Collective Logo_10
+  - first:
+      213: -77328327867886783
+    second: Liminal Collective Logo_11
+  - first:
+      213: -5411855166339493246
+    second: Liminal Collective Logo_12
+  - first:
+      213: -677023668746823154
+    second: Liminal Collective Logo_13
+  - first:
+      213: 3081377733251018807
+    second: Liminal Collective Logo_14
+  - first:
+      213: -3169374704573590624
+    second: Liminal Collective Logo_15
+  - first:
+      213: 857574678422287311
+    second: Liminal Collective Logo_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Liminal Collective Logo_0
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 544
+        width: 65
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35902bab58b308130800000000000000
+      internalID: 3566916350426351955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Liminal Collective Logo_1
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 546
+        width: 22
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d67629e8ffaa0b7a0800000000000000
+      internalID: -6363398258889169043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Liminal Collective Logo_2
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 546
+        width: 108
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e4e097f6c5a90f00800000000000000
+      internalID: 1083579459334890724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Liminal Collective Logo_3
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 546
+        width: 21
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85df2db70ac4c9200800000000000000
+      internalID: 188109536598621528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Liminal Collective Logo_4
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 547
+        width: 85
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0fd1736189353730800000000000000
+      internalID: 3978149073733672718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Liminal Collective Logo_5
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 546
+        width: 84
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a8035c72d5786b60800000000000000
+      internalID: 7739565506525595816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Liminal Collective Logo_6
+      rect:
+        serializedVersion: 2
+        x: 1196
+        y: 544
+        width: 65
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7254fb400847da0b0800000000000000
+      internalID: -5715784258879011545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Liminal Collective Logo_7
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 408
+        width: 78
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e305271c91bea2aa0800000000000000
+      internalID: -6184872642387750850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Liminal Collective Logo_8
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 409
+        width: 78
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6b009356b7515ff0800000000000000
+      internalID: -49161680326751378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Liminal Collective Logo_9
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 407
+        width: 65
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 975a4c77229865a70800000000000000
+      internalID: 8815384101755594105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Liminal Collective Logo_10
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 407
+        width: 65
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45475caf1c903a0e0800000000000000
+      internalID: -2259951859269274540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Liminal Collective Logo_11
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 408
+        width: 64
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1431c56ab464deef0800000000000000
+      internalID: -77328327867886783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Liminal Collective Logo_12
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 410
+        width: 78
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 282d872466a35e4b0800000000000000
+      internalID: -5411855166339493246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Liminal Collective Logo_13
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 409
+        width: 72
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0a50df6f8aba96f0800000000000000
+      internalID: -677023668746823154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Liminal Collective Logo_14
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 407
+        width: 22
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 730b939f8b043ca20800000000000000
+      internalID: 3081377733251018807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Liminal Collective Logo_15
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 409
+        width: 82
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a358cd8f7e1404d0800000000000000
+      internalID: -3169374704573590624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Liminal Collective Logo_16
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 410
+        width: 64
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc3fabb50a7b6eb00800000000000000
+      internalID: 857574678422287311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Liminal Collective Logo_0: 3566916350426351955
+      Liminal Collective Logo_1: -6363398258889169043
+      Liminal Collective Logo_10: -2259951859269274540
+      Liminal Collective Logo_11: -77328327867886783
+      Liminal Collective Logo_12: -5411855166339493246
+      Liminal Collective Logo_13: -677023668746823154
+      Liminal Collective Logo_14: 3081377733251018807
+      Liminal Collective Logo_15: -3169374704573590624
+      Liminal Collective Logo_16: 857574678422287311
+      Liminal Collective Logo_2: 1083579459334890724
+      Liminal Collective Logo_3: 188109536598621528
+      Liminal Collective Logo_4: 3978149073733672718
+      Liminal Collective Logo_5: 7739565506525595816
+      Liminal Collective Logo_6: -5715784258879011545
+      Liminal Collective Logo_7: -6184872642387750850
+      Liminal Collective Logo_8: -49161680326751378
+      Liminal Collective Logo_9: 8815384101755594105
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

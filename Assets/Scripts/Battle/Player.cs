@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float baseDefense = 5;
     [SerializeField] private float luck = 0.001f;
     [SerializeField] private bool isPlayerAlive = false;
+    [SerializeField] private Image HitFX;
     public List<StatusEffect> statusEffects = new List<StatusEffect>();
 
     public void Heal(float amount)
@@ -39,6 +41,7 @@ public class Player : MonoBehaviour
         float damageReduction = 100 / (100 + actualDefense);
         float actualDamage = rawDamage * damageReduction;
         health -= actualDamage;
+        FadeOut();
         if (health < 0)
         {
             health = 0;
@@ -85,5 +88,30 @@ public class Player : MonoBehaviour
         }
         yield return new WaitForSeconds(0.1f);
     }
+    public void FadeOut()
+    {
+        StartCoroutine(FadeCoroutine());
+    }
 
+    private System.Collections.IEnumerator FadeCoroutine()
+    {
+        Color startColor = HitFX.color;
+        Color endColor = startColor;
+        startColor.a = 0.5f;  // start with alpha = 0.5
+        endColor.a = 0f;      // end with alpha = 0
+
+        HitFX.color = startColor;
+
+        float t = 0f;
+        while (t < 1)
+        {
+            t += Time.deltaTime;
+            float normalized = t / 1;
+            HitFX.color = Color.Lerp(startColor, endColor, normalized);
+            yield return null;
+        }
+
+        // Ensure it ends at alpha 0
+        HitFX.color = endColor;
+    }
 }

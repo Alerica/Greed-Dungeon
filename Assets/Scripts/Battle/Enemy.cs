@@ -152,6 +152,13 @@ public class Enemy : MonoBehaviour
 
     public float GetHealth() => health;
 
+    public float SetHealth(float newHealth)
+    {
+        maxHealth = newHealth;
+        health = newHealth;
+        return health;
+    }
+
     public float GetAttackPower()
     {
         return attackPower;

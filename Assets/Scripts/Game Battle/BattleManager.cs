@@ -41,7 +41,7 @@ public class BattleManager : MonoBehaviour
     public BattleUIManager battleUIManager;
     public HorizontalCardHolder cardHolder;
     public TextVisualEffect turnBanner;
-
+    public EnemyJumpUI enemyJumpUI;
     public Transform energyTransform;
     public Transform hpTransform;
 
@@ -163,11 +163,17 @@ public class BattleManager : MonoBehaviour
 
     public void ResetGame()
     {
+        cardHolder.DeleteAllCards();
+        foreach (GameObject enemy in enemies)
+        {
+            enemy.GetComponent<Enemy>().Die();
+        }
         playerScript.Heal(1000);
         currentStage = 0;
         currentEnergy = 5;
         currentState = BattleState.NotStarted;
-        cardHolder.DeleteAllCards();
+
+       
         ResetDeck();
     } 
 // 
@@ -186,6 +192,8 @@ public class BattleManager : MonoBehaviour
                 enemyObj = enemySpawner.SpawnEnemy(false);
             }
             Enemy enemyScript = enemyObj.GetComponent<Enemy>();
+            enemyScript.SetHealth(enemyScript.GetHealth() * Mathf.Pow(1.04f, currentStage - 1));
+
             if (enemyScript != null)
             {
                 RegisterEnemy(enemyObj);
@@ -215,9 +223,9 @@ public class BattleManager : MonoBehaviour
             AudioManager.I?.PlaySFX("loses");
             Debug.Log("Player has been defeated!");
             if (turnBanner) turnBanner.ShowBanner("YOU DIED!", Color.red);
-            ResetGame();
             CountReward();
             rewardPanel.SetActive(true);
+            ResetGame();
         }
     }
 
@@ -288,14 +296,15 @@ public class BattleManager : MonoBehaviour
             }
             else
             {
-                Debug.Log($"Enemy attack with {enemyScript.GetAttackPower()}");
-                playerScript.TakeDamage(enemyScript.GetAttackPower());
-                UpdatePlayerHP();
+                //Debug.Log($"Enemy attack with {enemyScript.GetAttackPower()}");
+                //playerScript.TakeDamage(enemyScript.GetAttackPower());
+                //UpdatePlayerHP();
+                enemyJumpUI.PlayJump();
             }
         }
 
 
-        yield return new WaitForSeconds(0.5f); // small buffer
+        yield return new WaitForSeconds(enemyJumpUI.GetJumpDuration()); // small buffer
         if (AreAllEnemiesDead())
         {
             StartCoroutine(WhenAllEnemiesDefeated());
