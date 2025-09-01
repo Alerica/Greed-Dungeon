@@ -9,6 +9,8 @@ public class PanelManager : MonoBehaviour
 
     private CanvasGroup currentPanel;
 
+    private bool isSwitching = false;
+
     void Start()
     {
         currentPanel = mainPanel;
@@ -23,6 +25,8 @@ public class PanelManager : MonoBehaviour
 
     private IEnumerator SwitchPanel(CanvasGroup target)
     {
+        if(isSwitching) yield break;
+        isSwitching = true;
         if (currentPanel == target) yield break;
 
         // Enable target
@@ -49,5 +53,6 @@ public class PanelManager : MonoBehaviour
         // Disable old
         currentPanel.gameObject.SetActive(false);
         currentPanel = target;
+        isSwitching = false;
     }
 }

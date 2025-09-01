@@ -113,12 +113,10 @@ public class BattleManager : MonoBehaviour
 
         if (currentStage >= 2)
         {
-            // Pause and wait for player decision
             ShowRetreatOrContinueUI();
         }
         else
         {
-            // Continue automatically
             ContinueToStage();
         }
     }
@@ -159,7 +157,6 @@ public class BattleManager : MonoBehaviour
         bossDefeatedText.text = $"{bossDefeatedpoints}";
         currentStageText.text = $"{currentStagePoints}";
 
-
         Debug.Log($"Current Points : {gamePoints}");
     }
 
@@ -169,11 +166,10 @@ public class BattleManager : MonoBehaviour
         currentStage = 0;
         currentEnergy = 5;
         currentState = BattleState.NotStarted;
-        // cardHolder.ClearAllCards();
+        cardHolder.DeleteAllCards();
         ResetDeck();
-        
     } 
-
+// 
     private void ContinueToStage()
     {
         maxEnergy += 1;
@@ -238,15 +234,11 @@ public class BattleManager : MonoBehaviour
     private IEnumerator EndPlayerTurnRoutine()
     {
         Debug.Log("Ending Player Turn");
-        // small delay before next step
         yield return new WaitForSeconds(0.5f);
 
         if (AreAllEnemiesDead())
         {
-            bGAnimator.StartAnimation();
-            if (turnBanner) turnBanner.ShowBanner("ENEMY DEFEATED!", Color.yellow);
-            yield return new WaitForSeconds(2f);
-            NextStage();
+            StartCoroutine(WhenAllEnemiesDefeated());
         }
         else
         {
@@ -254,8 +246,17 @@ public class BattleManager : MonoBehaviour
             EnemyTurn();
         }
     }
+
+    public IEnumerator WhenAllEnemiesDefeated()
+    {
+        bGAnimator.StartAnimation();
+        if (turnBanner) turnBanner.ShowBanner("ENEMY DEFEATED!", Color.yellow);
+        yield return new WaitForSeconds(2f);
+        NextStage();
+    }
     public void EnemyTurn()
     {
+        inputBlocker.SetActive(true); 
         currentState = BattleState.EnemyTurn;
 
         Debug.Log("Enemy's Turn");
@@ -267,40 +268,48 @@ public class BattleManager : MonoBehaviour
     {
         if (turnBanner) yield return turnBanner.ShowBannerCoroutine("ENEMY TURN!", Color.red);
 
-        foreach (GameObject enemy in enemies)
+        foreach (GameObject enemy in new List<GameObject>(enemies))
         {
+            if (enemy == null) continue; // skip destroyed
+
             Enemy enemyScript = enemy.GetComponent<Enemy>();
-            if (enemyScript != null)
-            {
-                yield return enemyScript.ProcessTurnEffectsCoroutine();
-                Debug.Log($"{enemy.name} finished turn effects!");
-            }
+            if (enemyScript == null) continue;
+
+            yield return enemyScript.ProcessTurnEffectsCoroutine();
+            if (enemy) Debug.Log($"{enemy.name} finished turn effects!");
 
             if (enemyScript.isStunned)
             {
                 Debug.Log($"{enemy.name} is stunned and skips its attack!");
-                if (turnBanner) yield return turnBanner.ShowBannerCoroutine($"Stunned!", Color.yellow);
-                continue; 
+                if (turnBanner) yield return turnBanner.ShowBannerCoroutine("Stunned!", Color.yellow);
+                continue;
             }
             else
             {
-                Debug.Log($"Enemy attack with {enemyScript.GetAttackPower()}"); playerScript.TakeDamage(enemyScript.GetAttackPower());
+                Debug.Log($"Enemy attack with {enemyScript.GetAttackPower()}");
+                playerScript.TakeDamage(enemyScript.GetAttackPower());
                 UpdatePlayerHP();
             }
-            
         }
 
+
         yield return new WaitForSeconds(0.5f); // small buffer
-        PlayerTurn();
+        if (AreAllEnemiesDead())
+        {
+            StartCoroutine(WhenAllEnemiesDefeated());
+        }
+        else
+        {
+            PlayerTurn();
+        }
     }
 
     public void RemoveEnemy(Enemy enemy)
     {
         if (enemies.Contains(enemy.gameObject))
         {
-            
             enemies.Remove(enemy.gameObject);
-            if(enemy.gameObject) Destroy(enemy.gameObject);
+            if (enemy.gameObject) Destroy(enemy.gameObject, 0.5f);
             enemiesDefeated++;
             AddEnergy(3);
         }

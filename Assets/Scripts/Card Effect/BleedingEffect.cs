@@ -8,7 +8,11 @@ public class BleedEffect : CardEffect
 
     public override void Apply(GameObject target)
     {
-        Enemy enemy = target.GetComponent<Enemy>();
+        Enemy enemy = null;
+        if (target)
+        {
+            enemy = target.GetComponent<Enemy>();
+        }
         if (enemy != null) // flesh check
         {
             enemy.ApplyStatus(new StatusEffect(StatusType.Bleed, damagePerTurn, durationTurns));

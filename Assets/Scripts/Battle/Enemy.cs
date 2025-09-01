@@ -112,8 +112,8 @@ public class Enemy : MonoBehaviour
     // Call this at the **start or end of each enemy turn**
     public IEnumerator ProcessTurnEffectsCoroutine()
     {
-        isStunned = false; // reset stun each turn
-        enemyDamageModifier = 1f; // reset modifier each turn
+        isStunned = false; 
+        enemyDamageModifier = 1f; 
         for (int i = statusEffects.Count - 1; i >= 0; i--)
         {
             var effect = statusEffects[i];

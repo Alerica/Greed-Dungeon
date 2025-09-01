@@ -7,7 +7,12 @@ public class DealDamageEffect : CardEffect
 
     public override void Apply(GameObject target)
     {
-        Enemy enemy = target.GetComponent<Enemy>();
+        Enemy enemy = null;
+        if (target)
+        {
+            enemy = target.GetComponent<Enemy>();
+        }
+            
         if (enemy != null)
         {
             enemy.TakeDamage(damageAmount);

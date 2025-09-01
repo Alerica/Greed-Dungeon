@@ -261,7 +261,10 @@ public class CardVisual : MonoBehaviour
         transform.DOScale(1, scaleTransition).SetEase(scaleEase);
 
         // Check if card is in top half and player has enough energy
-        if (IsInTopHalf() && BattleManager.Instance.GetCurrentEnergy() >= parentCard.cardData.energyCost && BattleManager.Instance.currentState == BattleState.PlayerTurn)
+        if (IsInTopHalf() &&
+        BattleManager.Instance.GetCurrentEnergy() >= parentCard.cardData.energyCost &&
+        BattleManager.Instance.currentState == BattleState.PlayerTurn &&
+        BattleManager.Instance.enemies.Count > 0)
         {
             UseCard();
             if (TryGetComponent<CanvasGroup>(out var canvasGroup))

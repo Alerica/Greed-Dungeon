@@ -188,4 +188,13 @@ public class HorizontalCardHolder : MonoBehaviour
         BattleManager.Instance.battleUIManager.UpdateCardCount(BattleManager.Instance.GetDeckCount());
     }
 
+    public void DeleteAllCards()
+    {
+        foreach (Transform child in transform)
+        {
+            Destroy(child.gameObject); 
+            // child = CardSlot → contains Card → OnDestroy of Card cleans up CardVisual
+        }
+    }
+
 }

@@ -8,7 +8,12 @@ public class GnawwedEffect : CardEffect
 
     public override void Apply(GameObject target)
     {
-        Enemy enemy = target.GetComponent<Enemy>();
+        Enemy enemy = null;
+        if (target)
+        {
+            enemy = target.GetComponent<Enemy>();
+        }
+        
         if (enemy != null)
         {
             enemy.ApplyStatus(new StatusEffect(StatusType.Gnawed, GnwawwedDamage, durationTurns));
