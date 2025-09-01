@@ -4,6 +4,7 @@ using UnityEditor;
 using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
+using GameAudio;
 
 public class BattleManager : MonoBehaviour
 {
@@ -211,6 +212,7 @@ public class BattleManager : MonoBehaviour
         if (playerScript.CheckHealth() <= 0)
         {
             currentState = BattleState.NotStarted;
+            AudioManager.I?.PlaySFX("loses");
             Debug.Log("Player has been defeated!");
             if (turnBanner) turnBanner.ShowBanner("YOU DIED!", Color.red);
             ResetGame();
