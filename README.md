@@ -4,7 +4,7 @@
 **Albert** (Game programmer & Artist)
 
 ## About
-Greed Dungeon is a strategic card-based roguelike where players battle through increasingly difficult stages using a deck of powerful cards. Manage your energy, build devastating combos, and survive against waves of enemies with unique status effects. Choose between retreating with your rewards or pushing deeper into the dungeon for greater treasures. Every decision matters as you balance risk and reward in this challenging turn-based adventure.
+Greed Dungeon is a strategic deck building roguelike where players battle through increasingly difficult stages using a deck of powerful cards. Manage your energy, build devastating combos, and survive against waves of enemies with unique status effects. Choose between retreating with your rewards or pushing deeper into the dungeon for greater treasures. Every decision matters as you balance risk and reward in this challenging turn-based adventure.
 
 <br>
 
